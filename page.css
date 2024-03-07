@@ -31,7 +31,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 100;
     transition: background-color 0.3s ease;
 }
 #logo {
@@ -47,6 +47,10 @@ body {
     display: flex;
     justify-content: space-around;
 }
+
+#navItems a.active {
+    text-decoration: underline; /* Underline the link when it's active */
+  }
 
 nav a {
     margin: 0 10px;
@@ -81,6 +85,16 @@ nav a {
 .welcomeContainer h2{
     font-size: 28px;
 }
+.sectionContainer{
+    height: 100vh;
+    margin-bottom: 10vh;
+
+}
+
+.first{
+    margin: 120px auto 100px auto;
+}
+
 
 .citiesContainer {
     margin: 0 auto;
@@ -90,8 +104,26 @@ nav a {
     background-color: rgba(0,0,0,0.6);
     display: flex;
     flex-direction: column;
+    padding: 55px;
+    justify-content: space-between;
+    z-index: 2;
+
+    color: #fff;
 }
 
+.cities{
+    height: 70vh;
+    justify-content: center;
+}
+
+.citiesContainer h3{
+    font-size: 35px;
+    text-decoration: underline;
+}
+
+.citiesContainer p{
+    font-size: 25px;
+}
 .citiesContainer img{
     filter: invert(100%);
     width: 40px;
@@ -102,7 +134,8 @@ nav a {
     width: 15%;
     margin-top: auto;
     align-self: flex-end;
-    margin: auto 20px 20px 0;
+    margin: 0 20px 20px 0;
+    width: 15%;
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -115,3 +148,68 @@ nav a {
     z-index: 2;
 }
 
+.text{
+    align-self: self-start;
+    justify-content: space-between;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.small{
+    height: 40%;
+}
+
+.galleryContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.image{
+    width: 140px;
+    height: 140px;
+    background: url(./assets/background.jpg);
+    background-size: cover;
+}
+
+.galleryGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+}
+
+.photo{
+    width: 100%; 
+    height: 33vh; 
+}
+
+.city1{
+    background: url(./assets/background.jpg);
+    background-size: cover;
+}
+
+.city2{
+    background: url(./assets/background.jpg);
+    background-size: cover;
+}
+
+.city3{
+    background: url(./assets/background.jpg);
+    background-size: cover;
+}
+
+.city4{
+    background: url(./assets/background.jpg);
+    background-size: cover;
+}
+
+.city5{
+    background: url(./assets/background.jpg);
+    background-size: cover;
+}
+
+.city6{
+    background: url(./assets/background.jpg);
+    background-size: cover;
+}
