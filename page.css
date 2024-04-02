@@ -121,6 +121,11 @@ nav a {
     justify-content: center;
 }
 
+.cities h3 {
+    text-decoration: none;
+    font-size: 20px;
+}
+
 .citiesContainer h3 {
     font-size: 35px;
     text-decoration: underline;
@@ -244,5 +249,15 @@ nav a {
 
 .explore_text {
     color: white;
-    font-size: 20px;
+    font-size: 25px;
 }
+
+.label {
+    text-decoration: none;
+    font-size: 25px;
+    position: absolute;  
+    bottom: 10px;
+    left: 10px; 
+    z-index: 5;
+}
+
