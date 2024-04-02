@@ -5,21 +5,21 @@ body {
     background-image: url("assets/background.jpg");
     background-size: 100%;
     background-attachment: fixed;
-    background-color: rgba(0,1,6,225);
+    background-color: rgba(0, 1, 6, 225);
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.overlay{
+.overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.35);
+    background-color: rgba(0, 0, 0, 0.35);
     z-index: 0;
 }
 
-#navbarContainer{
+#navbarContainer {
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -34,6 +34,7 @@ body {
     z-index: 100;
     transition: background-color 0.3s ease;
 }
+
 #logo {
     float: left;
     margin-left: 20px;
@@ -49,8 +50,9 @@ body {
 }
 
 #navItems a.active {
-    text-decoration: underline; /* Underline the link when it's active */
-  }
+    text-decoration: underline;
+    /* Underline the link when it's active */
+}
 
 nav a {
     margin: 0 10px;
@@ -64,7 +66,7 @@ nav a {
     height: 800px;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 
 }
@@ -76,22 +78,25 @@ nav a {
     color: white;
     text-align: center;
     z-index: 2;
+    position: relative;
 }
 
-.welcomeContainer h1{
+.welcomeContainer h1 {
     font-size: 55px;
     margin-bottom: 90px;
 }
-.welcomeContainer h2{
+
+.welcomeContainer h2 {
     font-size: 28px;
 }
-.sectionContainer{
+
+.sectionContainer {
     height: 100vh;
     margin-bottom: 10vh;
 
 }
 
-.first{
+.first {
     margin: 120px auto 100px auto;
 }
 
@@ -101,30 +106,31 @@ nav a {
     margin-bottom: 100px;
     height: 70vh;
     width: 80vw;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
     padding: 55px;
     justify-content: space-between;
     z-index: 2;
-
+    position: relative;
     color: #fff;
 }
 
-.cities{
+.cities {
     height: 70vh;
     justify-content: center;
 }
 
-.citiesContainer h3{
+.citiesContainer h3 {
     font-size: 35px;
     text-decoration: underline;
 }
 
-.citiesContainer p{
+.citiesContainer p {
     font-size: 25px;
 }
-.citiesContainer img{
+
+.citiesContainer img {
     filter: invert(100%);
     width: 40px;
     height: 40px;
@@ -135,20 +141,21 @@ nav a {
     margin-top: auto;
     align-self: flex-end;
     margin: 0 20px 20px 0;
-    width: 15%;
+    width: auto;
     align-items: center;
     display: flex;
     justify-content: space-between;
 }
 
-.cityButton a{
+.cityButton a {
     text-decoration: none;
     font-size: 25px;
     color: #fff;
     z-index: 2;
+    margin-right: 10px;
 }
 
-.text{
+.text {
     align-self: self-start;
     justify-content: space-between;
     height: 60%;
@@ -156,60 +163,83 @@ nav a {
     flex-direction: column;
 }
 
-.small{
+.small {
     height: 40%;
 }
 
-.galleryContainer{
+.galleryContainer {
     display: flex;
     justify-content: space-between;
 }
 
-.image{
-    width: 140px;
-    height: 140px;
+.image {
+    width: 180px;
+    height: 170px;
     background: url(./assets/background.jpg);
     background-size: cover;
 }
 
-.galleryGrid{
+.galleryGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
     gap: 20px;
 }
 
-.photo{
-    width: 100%; 
-    height: 33vh; 
+.photo {
+    width: 100%;
+    height: 33vh;
 }
 
-.city1{
+.city1 {
     background: url(./assets/background.jpg);
     background-size: cover;
 }
 
-.city2{
+.city2 {
     background: url(./assets/background.jpg);
     background-size: cover;
 }
 
-.city3{
+.city3 {
     background: url(./assets/background.jpg);
     background-size: cover;
 }
 
-.city4{
+.city4 {
     background: url(./assets/background.jpg);
     background-size: cover;
 }
 
-.city5{
+.city5 {
     background: url(./assets/background.jpg);
     background-size: cover;
 }
 
-.city6{
+.city6 {
     background: url(./assets/background.jpg);
     background-size: cover;
 }
+
+.overlay_city {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .photo:hover .overlay_city {
+    opacity: 1;
+  }
+  
+  .explore_text {
+    color: white;
+    font-size: 20px;
+  }
