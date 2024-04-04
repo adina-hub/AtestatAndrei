@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-size: 16px; 
+    font-size: 16px;
 }
 
 body {
@@ -67,48 +67,6 @@ nav a {
     color: #fff;
 }
 
-.example {
-    height: 800px;
-}
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-
-
-
-.label {
-    text-decoration: none;
-    font-size: 15px;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: white;
-}
-
-.cities h3 {
-    text-decoration: none;
-    font-size: 20px;
-}
-
-
-
-
-
-
-
-
-
-
-
-.photo {
-    width: 100%;
-    height: 33vh;
-    position: relative;
-    overflow: hidden;
-}
-
 .city1 {
     background: url(./assets/Tokyo1.jpg);
     background-size: cover;
@@ -139,81 +97,38 @@ nav a {
     background-size: cover;
 }
 
-.overlay_city {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    cursor: pointer;
+
+.example {
+    height: 800px;
 }
 
-.search-icon {
-    width: 50px;
-    height: 50px;
-    filter: invert(100%);
-    cursor: pointer;
+::-webkit-scrollbar {
+    display: none;
 }
 
-.photo:hover .overlay_city {
-    opacity: 1;
-}
 
-.explore_text {
-    color: white;
-    font-size: 25px;
+
+
+.label {
     text-decoration: none;
+    font-size: 15px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
 }
 
-.explore_text:hover {
-    text-decoration: underline;
+.cities h3 {
+    text-decoration: none;
+    font-size: 20px;
 }
 
 .cityButton:hover {
     text-decoration: underline;
 }
 
-
-
-.explore {
-    display: flex;
-    width: auto;
-    align-items: center;
-    font-size: 25px;
-    cursor: pointer;
-}
-
-.label {
-    text-decoration: none;
-    font-size: 25px;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    z-index: 1;
-}
-
 .big {
     grid-column: span 2;
-}
-
-.modal-container {
-    position: fixed;
-    width: 70vw;
-    height: 70vh;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    display: none;
-    background-size: cover;
 }
 
 .close-button {
@@ -225,16 +140,7 @@ nav a {
     cursor: pointer;
 }
 
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 999;
-    display: none;
-}
+
 
 /* GRID GALLERY STYLE */
 

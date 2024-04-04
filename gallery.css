@@ -1,0 +1,120 @@
+.sectionContainer_cities {
+  height: 100vh;
+  margin: 7.5rem auto 6.25rem auto;
+}
+
+.citiesContainer_cities {
+  margin: 0 auto;
+  margin-bottom: 6.25rem;
+  margin-top: 6.25rem;
+  min-height: 70vh;
+  height: auto;
+  width: 85%;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  padding: 3.4rem;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+  color: #fff;
+  align-items: center;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 999;
+  display: none;
+}
+
+.modal-container {
+  position: fixed;
+  width: 70vw;
+  height: 70vh;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: none;
+  background-size: cover;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1.25rem;
+  width: 95%;
+}
+
+.search-icon {
+  width: 50px;
+  height: 50px;
+  filter: invert(100%);
+  cursor: pointer;
+}
+
+.overlay_city {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.label {
+  text-decoration: none;
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 0.6rem;
+  left: 0.6rem;
+  z-index: 1;
+}
+
+.photo {
+  width: 100%;
+  height: 33vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo:hover .overlay_city {
+  opacity: 1;
+}
+
+/* For screens between 769px and 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .label {
+    font-size: 1.2rem;
+  }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .galleryGrid {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .label {
+    font-size: 1.2rem;
+  }
+
+  .modal-container {
+    width: 80vw;
+  }
+}

@@ -34,10 +34,10 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 45vh;
+  height: 50vh;
   width: 20vw;
   background-color: rgba(34, 40, 49, 0.8);
-  padding: 20px 0px;
+  padding: 1rem 0px;
 }
 
 .city_image {
@@ -48,5 +48,80 @@
 .details {
   width: 85%;
   text-align: center;
-  font-size: 15px;
+  font-size: 1rem;
+}
+
+.arrow-icon-small {
+  width: 2.5rem;
+  height: 2.5rem;
+  filter: invert(100%);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.explore {
+  display: flex;
+  width: auto;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.explore_text {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin-right: 0.7rem;
+}
+
+.explore_text:hover {
+  text-decoration: underline;
+}
+
+/* For screens between 769px and 1024px */
+@media (max-width: 1440px) {
+  .galleryGrid {
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .city {
+    width: 26vw;
+  }
+}
+
+/* For screens between 769px and 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .details {
+    font-size: 0.8rem;
+  }
+
+  .explore_text {
+    font-size: 1.2rem;
+  }
+
+  .arrow-icon-small {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .city_image {
+    width: 80%;
+  }
+
+  .details {
+    font-size: 0.6rem;
+  }
+
+  .explore_text {
+    font-size: 1rem;
+  }
+
+  .arrow-icon-small {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
 }
