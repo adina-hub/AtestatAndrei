@@ -1,0 +1,40 @@
+.sectionContainer {
+  height: 100vh;
+  margin-bottom: 10vh;
+}
+
+.citiesContainer {
+  margin: 0 auto;
+  margin-bottom: 6.25rem;
+  margin-top: 6.25rem;
+  min-height: 70vh;
+  height: auto;
+  width: 80vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  padding: 3.4rem;
+  justify-content: space-between;
+  z-index: 1;
+  position: relative;
+  color: #fff;
+  align-items: center;
+}
+
+.text {
+  align-self: self-start;
+  justify-content: space-between;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitle {
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+.details-text {
+  font-size: 1.5rem;
+  width: 100%;
+}
