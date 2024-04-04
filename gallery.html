@@ -5,7 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="page.css" />
-  <script src="page.js" defer></script>
 
   <title>CityZen || Gallery</title>
 </head>
@@ -35,60 +34,111 @@
         <div class="photo city1" data-image-url="assets/Tokyo1.jpg">
           <div class="label">Tokyo</div>
           <div class="overlay_city">
-            <img src="assets/search_icon.svg" alt="Search Icon">
+            <img src="assets/search_icon.svg" alt="Search Icon" class="search-icon">
           </div>
         </div>
         <div class="photo city2" data-image-url="assets/Kyoto1.jpg">
           <div class="label">Tokyo</div>
           <div class="overlay_city">
-            <img src="assets/search_icon.svg" alt="Search Icon">
+            <img src="assets/search_icon.svg" alt="Search Icon" class="search-icon">
           </div>
         </div>
         <div class="photo city3" data-image-url="assets/Osaka1.jpg">
           <div class="label">Tokyo</div>
           <div class="overlay_city">
-            <img src="assets/search_icon.svg" alt="Search Icon">
+            <img src="assets/search_icon.svg" alt="Search Icon" class="search-icon">
           </div>
         </div>
         <div class="photo city4" data-image-url="assets/Nara1.jpg">
           <div class="label">Tokyo</div>
           <div class="overlay_city">
-            <img src="assets/search_icon.svg" alt="Search Icon">
+            <img src="assets/search_icon.svg" alt="Search Icon" class="search-icon">
           </div>
         </div>
         <div class="photo city5 big" data-image-url="assets/Hiroshima1.jpg">
           <div class="label">Tokyo</div>
           <div class="overlay_city">
-            <img src="assets/search_icon.svg" alt="Search Icon">
+            <img src="assets/search_icon.svg" alt="Search Icon" class="search-icon">
           </div>
         </div>
         <div class="photo city6" data-image-url="assets/Yokohama1.jpg">
           <div class="label">Tokyo</div>
           <div class="overlay_city">
-            <img src="assets/search_icon.svg" alt="Search Icon">
+            <img src="assets/search_icon.svg" alt="Search Icon" class="search-icon">
           </div>
         </div>
         <div class="photo city6" data-image-url="assets/Tokyo1.jpg">
           <div class="label">Tokyo</div>
           <div class="overlay_city">
-            <img src="assets/search_icon.svg" alt="Search Icon">
+            <img src="assets/search_icon.svg" alt="Search Icon" class="search-icon">
           </div>
         </div>
         <div class="photo city6" data-image-url="assets/Tokyo1.jpg">
           <div class="label">Tokyo</div>
           <div class="overlay_city">
-            <img src="assets/search_icon.svg" alt="Search Icon">
+            <img src="assets/search_icon.svg" alt="Search Icon" class="search-icon">
           </div>
         </div>
         <div class="photo city6 big" data-image-url="assets/Tokyo1.jpg">
           <div class="label">Tokyo</div>
           <div class="overlay_city">
-            <img src="assets/search_icon.svg" alt="Search Icon">
+            <img src="assets/search_icon.svg" alt="Search Icon" class="search-icon">
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get references to the photo elements
+      const photos = document.querySelectorAll('.photo');
+
+      // Get reference to the modal container
+      const modalContainer = document.getElementById('modalContainer');
+
+      photos.forEach(photo => {
+        photo.addEventListener('click', () => {
+          // Extract the URL of the background image associated with the clicked photo
+          const imageUrl = photo.getAttribute('data-image-url');
+
+          // Set the background image of the modal container
+          modalContainer.style.backgroundImage = `url('${imageUrl}')`;
+
+          openModal()
+        });
+      });
+    })
+
+    // Close the modal when the close button is clicked
+    document.querySelector('.close-button').addEventListener('click', closeModal);
+
+
+    // Open the modal and overlay
+    function openModal() {
+      document.querySelector('.modal-overlay').style.display = 'block';
+      document.querySelector('.modal-container').style.display = 'block';
+      disableScroll();
+    }
+
+    // Close the modal and overlay
+    function closeModal() {
+      document.querySelector('.modal-overlay').style.display = 'none';
+      document.querySelector('.modal-container').style.display = 'none';
+      enableScroll();
+    }
+
+    // Function to disable scrolling
+    function disableScroll() {
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Function to enable scrolling
+    function enableScroll() {
+      document.body.style.overflow = '';
+    }
+  </script>
+
 </body>
 
 </html>

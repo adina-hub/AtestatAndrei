@@ -1,0 +1,52 @@
+.sectionContainer_cities {
+  height: 100vh;
+  margin: 7.5rem auto 6.25rem auto;
+}
+
+.citiesContainer_cities {
+  margin: 0 auto;
+  margin-bottom: 6.25rem;
+  margin-top: 6.25rem;
+  min-height: 70vh;
+  height: auto;
+  width: 85%;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  padding: 3.4rem;
+  justify-content: center;
+  z-index: 1;
+  position: relative;
+  color: #fff;
+  align-items: center;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1.25rem;
+  width: 95%;
+}
+
+.city {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 45vh;
+  width: 20vw;
+  background-color: rgba(34, 40, 49, 0.8);
+  padding: 20px 0px;
+}
+
+.city_image {
+  width: 70%;
+  height: 35%;
+}
+
+.details {
+  width: 85%;
+  text-align: center;
+  font-size: 15px;
+}

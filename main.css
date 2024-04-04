@@ -1,0 +1,203 @@
+.welcomeContainer {
+  width: auto;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcomeContainer h1 {
+  font-size: 3.5rem;
+  margin-bottom: 3.75rem;
+}
+
+.welcomeContainer h2 {
+  font-size: 1, 75rem;
+}
+
+.sectionContainer {
+  height: 100vh;
+  margin-bottom: 10vh;
+}
+
+.citiesContainer {
+  margin: 0 auto;
+  margin-bottom: 6.25rem;
+  margin-top: 6.25rem;
+  min-height: 70vh;
+  height: auto;
+  width: 80vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  padding: 3.4rem;
+  justify-content: space-between;
+  z-index: 1;
+  position: relative;
+  color: #fff;
+  align-items: center;
+}
+
+.subtitle {
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+.details-text {
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.details-small {
+  font-size: 1.4rem;
+}
+
+.text {
+  align-self: self-start;
+  justify-content: space-between;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.small {
+  height: 40%;
+}
+
+.cityButton {
+  align-self: flex-end;
+  margin: 0 1.25rem 1.25rem 0;
+  width: auto;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cityButton a {
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: #fff;
+  z-index: 1;
+  margin-right: 0.6rem;
+}
+
+.arrow-icon-small {
+  width: 2.5rem;
+  height: 2.5rem;
+  filter: invert(100%);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.cityButton:hover .arrow-icon-small {
+  transform: translateX(1.25rem);
+  /* Adjust the value as needed */
+}
+
+.galleryContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex: auto;
+  width: 85%;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+
+}
+
+.image {
+  width: 11rem;
+  height: 10rem;
+  flex: 0 0 calc(33.33% - 1.25rem);
+  margin-bottom: 1.25rem;
+}
+
+/* For screens between 769px and 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .welcomeContainer h1 {
+    font-size: 2.8rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .welcomeContainer h2 {
+    font-size: 1.5rem;
+  }
+
+  .citiesContainer {
+    padding: 2rem;
+    width: 85vw;
+    height: 75vh;
+  }
+
+  .cityButton a {
+    font-size: 1.3rem;
+  }
+
+  .galleryContainer {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .image {
+    width: 10rem;
+    height: 9rem;
+  }
+
+  .details-text {
+    font-size: 1.4rem;
+  }
+
+  .details-small {
+    font-size: 1.3rem;
+  }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .welcomeContainer h1 {
+    font-size: 2.6rem;
+    margin-bottom: 2.3rem;
+  }
+
+  .welcomeContainer h2 {
+    font-size: 1.3rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    text-decoration: underline;
+  }
+
+  .citiesContainer {
+    padding: 2rem;
+    width: 85vw;
+    height: 75vh;
+  }
+
+  .cityButton a {
+    font-size: 1.3rem;
+  }
+
+  .small {
+    height: auto;
+  }
+
+  .galleryContainer {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+
+  .image {
+    width: 10rem;
+    height: 9rem;
+  }
+
+  .details-text {
+    font-size: 1.4rem;
+  }
+}
