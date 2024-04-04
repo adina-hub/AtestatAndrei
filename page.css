@@ -152,6 +152,7 @@ nav a {
     filter: invert(100%);
     width: 40px;
     height: 40px;
+    cursor: pointer;
 }
 
 .cityButton {
@@ -195,6 +196,11 @@ nav a {
     height: 170px;
     background: url(./assets/background.jpg);
     background-size: cover;
+}
+
+.image:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .galleryGrid {
@@ -272,6 +278,10 @@ nav a {
 }
 
 .explore_text:hover {
+    text-decoration: underline;
+}
+
+.cityButton:hover {
     text-decoration: underline;
 }
 
