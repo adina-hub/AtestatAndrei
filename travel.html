@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="page.css" />
+  <link rel="stylesheet" href="travel.css" />
 
   <title>CityZen || Travel</title>
 </head>
@@ -47,19 +48,27 @@
           </div>
         </div>
 
-        <label for="duration">Duration (days):</label>
-        <input type="number" id="duration" name="duration" required><br><br>
-        <label>What do you like to do?</label><br>
-        <input type="checkbox" id="visit" name="activities" value="Visit">
-        <label for="visit">Visit attractions</label><br>
-        <input type="checkbox" id="eat" name="activities" value="Eat">
-        <label for="eat">Dine out</label><br>
-        <input type="checkbox" id="shop" name="activities" value="Shop">
-        <label for="shop">Shopping</label><br>
+        <div class="inputContainer">
+          <label class="duration_label" for="duration">Duration (days):</label>
+          <input type="number" id="duration" name="duration" required><br><br>
+        </div>
+        <div class="checkboxContainer">
+          <label>What would you like to do?</label><br>
+          <div class="variantsContainer">
+            <input type="checkbox" id="visit" name="activities" value="Visit">
+            <label for="visit">Visit attractions</label><br>
+            <input type="checkbox" id="eat" name="activities" value="Eat">
+            <label for="eat">Dine out</label><br>
+            <input type="checkbox" id="shop" name="activities" value="Shop">
+            <label for="shop">Shopping</label><br>
+          </div>
+
+        </div>
         <br>
-        <button type="submit">Generate Itinerary</button>
-        <!-- Reset button -->
-        <button type="button" onclick="resetItinerary()">Reset Itinerary</button>
+        <div class="buttonsContainer">
+          <button type="submit" class="buttonCustom">Generate Itinerary</button>
+          <button type="button" onclick="resetItinerary()" class="buttonCustom">Reset Itinerary</button>
+        </div>
         <!-- Hidden input field to store the selected city -->
         <input type="hidden" id="selectedCityInput" name="selectedCityInput">
       </form>
