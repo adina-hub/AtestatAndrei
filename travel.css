@@ -14,16 +14,18 @@
   display: flex;
   flex-direction: column;
   padding: 3.4rem;
-  justify-content: space-between;
+  justify-content: flex-start;
   z-index: 1;
   position: relative;
   color: #fff;
-  align-items: center;
+}
+
+.title {
+  text-align: center;
 }
 
 .preferences-form {
   color: white;
-  align-items: center;
   display: flex;
   flex-direction: column;
 }
@@ -31,36 +33,41 @@
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px;
+  gap: 1rem;
+  padding: 1rem;
   height: auto;
 }
 
 .card {
   position: relative;
-  padding: 10px;
+  padding: 0.8rem;
   cursor: pointer;
 }
+/* 
+.card :hover {
+  background-color: white;
+  color: black;
+} */
 
 .card-content {
   position: relative;
   height: 100%;
 }
 
-.card-content img {
+.img-container {
   width: 100%;
   height: 100%;
 }
 
 .city-label {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 0.8rem;
+  left: 0.8rem;
   color: white;
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px;
-  font-size: 15px;
+  padding: 0.6rem;
+  font-size: 1rem;
 }
 
 .selected {
@@ -70,19 +77,26 @@
 .inputContainer {
   display: flex;
   justify-content: space-between;
-  width: 25%;
+  max-width: 30%;
+  width: auto;
   align-items: center;
+  padding-left: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 .duration_label {
   margin-right: 10%;
   min-width: 50%;
+  font-size: 1.3rem;
 }
 
 .checkboxContainer {
   display: flex;
   flex-direction: column;
-  width: 25%;
+  max-width: 30%;
+  width: auto;
+  padding-left: 1.8rem;
+  font-size: 1.3rem;
 }
 
 .buttonsContainer {
@@ -90,6 +104,7 @@
   width: 25%;
   justify-content: space-between;
   margin-top: 1rem;
+  padding-left: 1.8rem;
 }
 
 .buttonCustom {
