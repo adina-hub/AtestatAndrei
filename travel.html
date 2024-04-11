@@ -25,25 +25,43 @@
 
   <div class="sectionContainer">
     <div class="citiesContainer">
-      <h2>Generate your travel itinerary</h2>
+      <h2 class="title">Generate your travel itinerary</h2>
       <form id="preferencesForm" class="preferences-form">
         <div class="grid-container">
           <div class="card" onclick="selectCity('Tokyo', this)" data-value="Tokyo">
             <div class="card-content">
-              <img src="assets/Tokyo1.jpg" alt="Tokyo">
+              <img class="img-container" src="assets/Tokyo1.jpg" alt="Tokyo">
               <div class="city-label">Tokyo</div>
             </div>
           </div>
           <div class="card" onclick="selectCity('Kyoto', this)" data-value="Kyoto">
             <div class="card-content">
-              <img src="assets/Kyoto1.jpg" alt="Kyoto">
+              <img class="img-container" src="assets/Kyoto1.jpg" alt="Kyoto">
               <div class="city-label">Kyoto</div>
             </div>
           </div>
           <div class="card" onclick="selectCity('Hiroshima', this)" data-value="Hiroshima">
             <div class="card-content">
-              <img src="assets/Hiroshima1.jpg" alt="Hiroshima">
+              <img class="img-container" src="assets/Hiroshima1.jpg" alt="Hiroshima">
               <div class="city-label">Hiroshima</div>
+            </div>
+          </div>
+          <div class="card" onclick="selectCity('Osaka', this)" data-value="Osaka">
+            <div class="card-content">
+              <img class="img-container" src="assets/Osaka1.jpg" alt="Osaka">
+              <div class="city-label">Osaka</div>
+            </div>
+          </div>
+          <div class="card" onclick="selectCity('Yokohama', this)" data-value="Yokohama">
+            <div class="card-content">
+              <img class="img-container" src="assets/Yokohama1.jpg" alt="Yokohama">
+              <div class="city-label">Yokohama</div>
+            </div>
+          </div>
+          <div class="card" onclick="selectCity('Nara', this)" data-value="Nara">
+            <div class="card-content">
+              <img class="img-container" src="assets/Nara1.jpg" alt="Nara">
+              <div class="city-label">Nara</div>
             </div>
           </div>
         </div>
@@ -82,6 +100,7 @@
 
 
   <script src="dataForQuiz.js"></script>
+
   <script>
     //What happens on 'submit' on the form 
     document.getElementById('preferencesForm').addEventListener('submit', function (event) {
@@ -165,17 +184,31 @@
     }
 
     function selectCity(city, card) {
-      // Remove 'selected' class from all cards
-      const cards = document.querySelectorAll('.card');
-      cards.forEach(card => {
-        card.classList.remove('selected');
-      });
-
-      // Add 'selected' class to the clicked card
-      card.classList.add('selected');
+      // Toggle the 'selected' class of the clicked card
+      card.classList.toggle('selected');
 
       // Set the value of the hidden input field in the form with the selected city name
-      document.getElementById('selectedCityInput').value = city;
+      const selectedCityInput = document.getElementById('selectedCityInput');
+      if (card.classList.contains('selected')) {
+        selectedCityInput.value = city;
+        // If a city is selected, show the itinerary container
+        document.getElementById('itineraryContainer').style.display = 'block';
+      } else {
+        selectedCityInput.value = ''; // Deselect the city if the card is deselected
+        // Check if any city is selected, if not, hide the itinerary container
+        const selectedCards = document.querySelectorAll('.card.selected');
+        if (selectedCards.length === 0) {
+          document.getElementById('itineraryContainer').style.display = 'none';
+        }
+      }
+
+      // Deselect other cards if more than one card is selected
+      const selectedCards = document.querySelectorAll('.card.selected');
+      selectedCards.forEach(selectedCard => {
+        if (selectedCard !== card) {
+          selectedCard.classList.remove('selected');
+        }
+      });
     }
 
     function resetItinerary() {
@@ -192,6 +225,7 @@
       });
     }
   </script>
+
 </body>
 
 </html>
