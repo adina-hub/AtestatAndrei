@@ -43,11 +43,6 @@
   padding: 0.8rem;
   cursor: pointer;
 }
-/* 
-.card :hover {
-  background-color: white;
-  color: black;
-} */
 
 .card-content {
   position: relative;
@@ -77,7 +72,7 @@
 .inputContainer {
   display: flex;
   justify-content: space-between;
-  max-width: 30%;
+  max-width: 20%;
   width: auto;
   align-items: center;
   padding-left: 1.8rem;
@@ -88,6 +83,18 @@
   margin-right: 10%;
   min-width: 50%;
   font-size: 1.3rem;
+}
+
+/* Hide spinner arrows for number inputs */
+.number-input::-webkit-inner-spin-button,
+.number-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.number-input {
+  -moz-appearance: textfield;
+  width: 15%;
 }
 
 .checkboxContainer {
@@ -114,4 +121,122 @@
   border-radius: 0.5rem;
   font-size: 1rem;
   cursor: pointer;
+}
+
+.itinerary {
+  margin-left: 1.8rem;
+  margin-top: 10vh;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.big {
+  font-size: 1.7rem;
+  color: black;
+  margin-bottom: 7vh;
+}
+
+.itinerary p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 0.8rem;
+}
+
+.itinerary strong {
+  color: #000;
+  font-size: 1.3rem;
+}
+
+.itinerary a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.1rem;
+}
+
+.itinerary a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .buttonsContainer {
+    width: 40%;
+  }
+
+  .inputContainer {
+    max-width: 30%;
+  }
+
+  .checkboxContainer {
+    max-width: 40%;
+  }
+
+  .grid-container {
+    gap: 0.7rem;
+  }
+
+  .itinerary strong {
+    font-size: 1.1rem;
+  }
+
+  .itinerary p {
+    font-size: 0.9rem;
+  }
+
+  .big {
+    font-size: 1.4rem;
+  }
+
+  .itinerary a {
+    font-size: 1rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .buttonsContainer {
+    width: 50%;
+  }
+
+  .card {
+    padding: 0.2rem;
+  }
+
+  .inputContainer {
+    max-width: 40%;
+  }
+
+  .checkboxContainer {
+    max-width: 50%;
+  }
+
+  .checkboxContainer label {
+    font-size: 1rem;
+  }
+
+  .duration_label {
+    font-size: 1rem;
+  }
+
+  .city-label {
+    font-size: 0.8rem;
+  }
+
+  .itinerary strong {
+    font-size: 1rem;
+  }
+
+  .itinerary p {
+    font-size: 0.9rem;
+  }
+
+  .big {
+    font-size: 1rem;
+  }
+
+  .itinerary a {
+    font-size: 0.9rem;
+  }
 }

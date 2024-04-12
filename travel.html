@@ -68,7 +68,7 @@
 
         <div class="inputContainer">
           <label class="duration_label" for="duration">Duration (days):</label>
-          <input type="number" id="duration" name="duration" required><br><br>
+          <input type="number" id="duration" name="duration" required class="number-input" min="1" max="100"><br><br>
         </div>
         <div class="checkboxContainer">
           <label>What would you like to do?</label><br>
@@ -153,30 +153,74 @@
     function displayItinerary(itinerary) {
       const itineraryContainer = document.getElementById('itineraryContainer');
       let itineraryHTML = `
-        <div class="itineraryContainer">
-          <h2>Your Travel Itinerary</h2>
+        <div class="itinerary">
+          <h2 class="title big">Your Travel Itinerary</h2>
           <p><strong>Destination:</strong> ${itinerary.selectedCity}</p>
           <p><strong>Duration:</strong> ${itinerary.duration} days</p>
       `;
-
       // Render Places to Stay section if itinerary.placesToStay exists
       if (itinerary.placesToStay && itinerary.placesToStay.length > 0) {
-        itineraryHTML += `<p><strong>Places to Stay:</strong> ${itinerary.placesToStay.join(', ')}</p>`;
+        itineraryHTML += `<p><strong>Places to Stay: </strong>`;
+        // Loop through each place to stay and create a link for it
+        itinerary.placesToStay.forEach(place => {
+          const placeName = place.name;
+          const placeLink = place.link;
+          if (placeLink) {
+            // Use the "link" class for styling
+            itineraryHTML += `<a href="${placeLink}" class="link" target="_blank">${placeName}</a>, `;
+          } else {
+            itineraryHTML += `${placeName}, `;
+          }
+        });
+        itineraryHTML += `</p>`;
       }
 
       // Render Restaurants section if itinerary.restaurants exists
       if (itinerary.restaurants && itinerary.restaurants.length > 0) {
-        itineraryHTML += `<p><strong>Restaurants:</strong> ${itinerary.restaurants.join(', ')}</p>`;
+        itineraryHTML += `<p><strong>Restaurants:</strong> `;
+        itinerary.restaurants.forEach(restaurant => {
+          const restaurantName = restaurant.name;
+          const restaurantLink = restaurant.link;
+          if (restaurantLink) {
+            // Use the "link" class for styling
+            itineraryHTML += `<a href="${restaurantLink}" class="link" target="_blank">${restaurantName}</a>, `;
+          } else {
+            itineraryHTML += `${restaurantName}, `;
+          }
+        });
+        itineraryHTML += `</p>`;
       }
 
       // Render Places to Visit section if itinerary.placesToVisit exists
       if (itinerary.placesToVisit && itinerary.placesToVisit.length > 0) {
-        itineraryHTML += `<p><strong>Places to Visit:</strong> ${itinerary.placesToVisit.join(', ')}</p>`;
+        itineraryHTML += `<p><strong>Places to Visit:</strong> `;
+        itinerary.placesToVisit.forEach(place => {
+          const placeName = place.name;
+          const placeLink = place.link;
+          if (placeLink) {
+            // Use the "link" class for styling
+            itineraryHTML += `<a href="${placeLink}" class="link" target="_blank">${placeName}</a>, `;
+          } else {
+            itineraryHTML += `${placeName}, `;
+          }
+        });
+        itineraryHTML += `</p>`;
       }
 
       // Render Shopping Places section if itinerary.shoppingPlaces exists
       if (itinerary.shoppingPlaces && itinerary.shoppingPlaces.length > 0) {
-        itineraryHTML += `<p><strong>Shopping Places:</strong> ${itinerary.shoppingPlaces.join(', ')}</p>`;
+        itineraryHTML += `<p><strong>Shopping Places:</strong> `;
+        itinerary.shoppingPlaces.forEach(place => {
+          const placeName = place.name;
+          const placeLink = place.link;
+          if (placeLink) {
+            // Use the "link" class for styling
+            itineraryHTML += `<a href="${placeLink}" class="link" target="_blank">${placeName}</a>, `;
+          } else {
+            itineraryHTML += `${placeName}, `;
+          }
+        });
+        itineraryHTML += `</p>`;
       }
 
       itineraryHTML += `</div>`;
