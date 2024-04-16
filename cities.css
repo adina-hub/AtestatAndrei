@@ -36,7 +36,9 @@
   align-items: center;
   height: 50vh;
   width: 20vw;
-  background-color: rgba(34, 40, 49, 0.8);
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  background-color: rgba(34, 40, 49, 0.86);
   padding: 1rem 0px;
 }
 
