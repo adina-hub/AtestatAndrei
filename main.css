@@ -24,11 +24,15 @@
   margin-bottom: 10vh;
 }
 
+.second {
+  margin-bottom: 2rem;
+}
+
 .citiesContainer {
   margin: 0 auto;
   margin-bottom: 6.25rem;
   margin-top: 6.25rem;
-  min-height: 70vh;
+  min-height: 75vh;
   height: auto;
   width: 80vw;
   background-color: rgba(0, 0, 0, 0.6);
