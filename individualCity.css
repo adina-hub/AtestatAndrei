@@ -1,12 +1,10 @@
 .sectionContainer {
-  height: 100vh;
+  height: auto;
   margin-bottom: 10vh;
 }
 
 .citiesContainer {
-  margin: 0 auto;
-  margin-bottom: 6.25rem;
-  margin-top: 6.25rem;
+  margin: 6.25rem auto 10vh;
   min-height: 70vh;
   height: auto;
   width: 80vw;
@@ -27,6 +25,7 @@
   height: 60%;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .subtitle {
@@ -34,7 +33,130 @@
   text-decoration: underline;
 }
 
-.details-text {
-  font-size: 1.5rem;
+.info {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ATTRACTIONS STYLE */
+
+.card {
+  position: relative;
+  padding: 0.8rem;
+  cursor: pointer;
+}
+
+.card-content {
+  position: relative;
+  height: 100%;
+}
+
+.img-container {
   width: 100%;
+  height: 100%;
+}
+
+.city-label {
+  position: absolute;
+  bottom: 0.8rem;
+  left: 0.8rem;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.6rem;
+  font-size: 1rem;
+}
+
+.grid-container {
+  margin-top: 1.3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  height: auto;
+}
+
+/* RESTAURANT STYLE */
+
+.restaurants-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  height: auto;
+}
+
+.restaurant-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  color: black;
+}
+
+.restaurant-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.restaurant-info h3 {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.rating i {
+  color: #f8c63d;
+}
+
+.restaurant-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.restaurant-link:hover {
+  text-decoration: underline;
+}
+
+/* SHOPPING */
+
+.shopping-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  height: auto;
+  width: 70%;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .city-label {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .city-label {
+    font-size: 0.6rem;
+  }
+
+  .restaurants-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .shopping-grid {
+    width: 80%;
+  }
 }
