@@ -218,18 +218,14 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // Get references to the photo elements
         const photos = document.querySelectorAll(".photo");
 
-        // Get reference to the modal container
         const modalContainer = document.getElementById("modalContainer");
 
         photos.forEach((photo) => {
           photo.addEventListener("click", () => {
-            // Extract the URL of the background image associated with the clicked photo
             const imageUrl = photo.getAttribute("data-image-url");
 
-            // Set the background image of the modal container
             modalContainer.style.backgroundImage = `url('${imageUrl}')`;
 
             openModal();
