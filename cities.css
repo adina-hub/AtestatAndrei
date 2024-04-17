@@ -45,6 +45,8 @@
 .city_image {
   width: 70%;
   height: 35%;
+  border: 1px solid #ccc;
+  border-radius: 7px;
 }
 
 .details {

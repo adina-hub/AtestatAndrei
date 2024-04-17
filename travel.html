@@ -1,277 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="page.css" />
+    <link rel="stylesheet" href="travel.css" />
+    <script src="page.js" defer></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="page.css" />
-  <link rel="stylesheet" href="travel.css" />
-  <script src="page.js" defer></script>
+    <title>CityZen || Travel</title>
+  </head>
 
+  <body>
+    <div class="overlay"></div>
 
-  <title>CityZen || Travel</title>
-</head>
+    <nav id="navbarContainer">
+      <div id="logo">CityZen</div>
+      <div id="navItems">
+        <a href="main.html">Home</a>
+        <a href="cities.html">Cities</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="travel.html" class="active">Travel</a>
+      </div>
+    </nav>
 
-<body>
-  <div class="overlay"></div>
-
-  <nav id="navbarContainer">
-    <div id="logo">CityZen</div>
-    <div id="navItems">
-      <a href="main.html">Home</a>
-      <a href="cities.html">Cities</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="travel.html" class="active">Travel</a>
-    </div>
-  </nav>
-
-  <div class="sectionContainer">
-    <div class="citiesContainer">
-      <h2 class="title">Generate your travel itinerary</h2>
-      <form id="preferencesForm" class="preferences-form">
-        <div class="grid-container">
-          <div class="card" onclick="selectCity('Tokyo', this)" data-value="Tokyo">
-            <div class="card-content">
-              <img class="img-container" src="assets/Tokyo1.jpg" alt="Tokyo">
-              <div class="city-label">Tokyo</div>
+    <div class="sectionContainer">
+      <div class="citiesContainer">
+        <h2 class="title">Generate your travel itinerary</h2>
+        <form id="preferencesForm" class="preferences-form">
+          <div class="grid-container">
+            <div
+              class="card"
+              onclick="selectCity('Tokyo', this)"
+              data-value="Tokyo"
+            >
+              <div class="card-content">
+                <img
+                  class="img-container"
+                  src="assets/Tokyo1.jpg"
+                  alt="Tokyo"
+                />
+                <div class="city-label">Tokyo</div>
+              </div>
+            </div>
+            <div
+              class="card"
+              onclick="selectCity('Kyoto', this)"
+              data-value="Kyoto"
+            >
+              <div class="card-content">
+                <img
+                  class="img-container"
+                  src="assets/Kyoto1.jpg"
+                  alt="Kyoto"
+                />
+                <div class="city-label">Kyoto</div>
+              </div>
+            </div>
+            <div
+              class="card"
+              onclick="selectCity('Osaka', this)"
+              data-value="Osaka"
+            >
+              <div class="card-content">
+                <img
+                  class="img-container"
+                  src="assets/Osaka1.jpg"
+                  alt="Osaka"
+                />
+                <div class="city-label">Osaka</div>
+              </div>
+            </div>
+            <div
+              class="card"
+              onclick="selectCity('Nara', this)"
+              data-value="Nara"
+            >
+              <div class="card-content">
+                <img class="img-container" src="assets/Nara1.jpg" alt="Nara" />
+                <div class="city-label">Nara</div>
+              </div>
+            </div>
+            <div
+              class="card"
+              onclick="selectCity('Hiroshima', this)"
+              data-value="Hiroshima"
+            >
+              <div class="card-content">
+                <img
+                  class="img-container"
+                  src="assets/Hiroshima1.jpg"
+                  alt="Hiroshima"
+                />
+                <div class="city-label">Hiroshima</div>
+              </div>
+            </div>
+            <div
+              class="card"
+              onclick="selectCity('Yokohama', this)"
+              data-value="Yokohama"
+            >
+              <div class="card-content">
+                <img
+                  class="img-container"
+                  src="assets/Yokohama1.jpg"
+                  alt="Yokohama"
+                />
+                <div class="city-label">Yokohama</div>
+              </div>
             </div>
           </div>
-          <div class="card" onclick="selectCity('Kyoto', this)" data-value="Kyoto">
-            <div class="card-content">
-              <img class="img-container" src="assets/Kyoto1.jpg" alt="Kyoto">
-              <div class="city-label">Kyoto</div>
+
+          <div class="inputContainer">
+            <label class="duration_label" for="duration"
+              >Duration (days):</label
+            >
+            <input
+              type="number"
+              id="duration"
+              name="duration"
+              required
+              class="number-input"
+              min="1"
+              max="100"
+            /><br /><br />
+          </div>
+          <div class="checkboxContainer">
+            <label>What would you like to do?</label><br />
+            <div class="variantsContainer">
+              <input
+                type="checkbox"
+                id="visit"
+                name="activities"
+                value="Visit"
+              />
+              <label for="visit">Visit attractions</label><br />
+              <input type="checkbox" id="eat" name="activities" value="Eat" />
+              <label for="eat">Dine out</label><br />
+              <input type="checkbox" id="shop" name="activities" value="Shop" />
+              <label for="shop">Shopping</label><br />
             </div>
           </div>
-          <div class="card" onclick="selectCity('Hiroshima', this)" data-value="Hiroshima">
-            <div class="card-content">
-              <img class="img-container" src="assets/Hiroshima1.jpg" alt="Hiroshima">
-              <div class="city-label">Hiroshima</div>
-            </div>
+          <br />
+          <div class="buttonsContainer">
+            <button type="submit" class="buttonCustom">
+              Generate Itinerary
+            </button>
+            <button
+              type="button"
+              onclick="resetItinerary()"
+              class="buttonCustom"
+            >
+              Reset Itinerary
+            </button>
           </div>
-          <div class="card" onclick="selectCity('Osaka', this)" data-value="Osaka">
-            <div class="card-content">
-              <img class="img-container" src="assets/Osaka1.jpg" alt="Osaka">
-              <div class="city-label">Osaka</div>
-            </div>
-          </div>
-          <div class="card" onclick="selectCity('Yokohama', this)" data-value="Yokohama">
-            <div class="card-content">
-              <img class="img-container" src="assets/Yokohama1.jpg" alt="Yokohama">
-              <div class="city-label">Yokohama</div>
-            </div>
-          </div>
-          <div class="card" onclick="selectCity('Nara', this)" data-value="Nara">
-            <div class="card-content">
-              <img class="img-container" src="assets/Nara1.jpg" alt="Nara">
-              <div class="city-label">Nara</div>
-            </div>
-          </div>
+          <!-- Hidden input field to store the selected city -->
+          <input
+            type="hidden"
+            id="selectedCityInput"
+            name="selectedCityInput"
+          />
+        </form>
+        <div id="itineraryContainer">
+          <!-- Itinerary will be displayed here -->
         </div>
-
-        <div class="inputContainer">
-          <label class="duration_label" for="duration">Duration (days):</label>
-          <input type="number" id="duration" name="duration" required class="number-input" min="1" max="100"><br><br>
-        </div>
-        <div class="checkboxContainer">
-          <label>What would you like to do?</label><br>
-          <div class="variantsContainer">
-            <input type="checkbox" id="visit" name="activities" value="Visit">
-            <label for="visit">Visit attractions</label><br>
-            <input type="checkbox" id="eat" name="activities" value="Eat">
-            <label for="eat">Dine out</label><br>
-            <input type="checkbox" id="shop" name="activities" value="Shop">
-            <label for="shop">Shopping</label><br>
-          </div>
-
-        </div>
-        <br>
-        <div class="buttonsContainer">
-          <button type="submit" class="buttonCustom">Generate Itinerary</button>
-          <button type="button" onclick="resetItinerary()" class="buttonCustom">Reset Itinerary</button>
-        </div>
-        <!-- Hidden input field to store the selected city -->
-        <input type="hidden" id="selectedCityInput" name="selectedCityInput">
-      </form>
-      <div id="itineraryContainer">
-        <!-- Itinerary will be displayed here -->
       </div>
     </div>
-  </div>
 
+    <script src="dataForQuiz.js"></script>
 
+    <script>
+      //What happens on 'submit' on the form
+      document
+        .getElementById("preferencesForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
 
+          // Retrieve the selected city from the hidden input field
+          const selectedCity =
+            document.getElementById("selectedCityInput").value;
 
-  <script src="dataForQuiz.js"></script>
+          // Check if a city is selected
+          if (!selectedCity) {
+            alert("Please select a city.");
+            return;
+          }
 
-  <script>
-    //What happens on 'submit' on the form 
-    document.getElementById('preferencesForm').addEventListener('submit', function (event) {
-      event.preventDefault();
+          // Retrieve other form inputs
+          const duration = parseInt(document.getElementById("duration").value);
+          const activities = Array.from(
+            document.querySelectorAll('input[name="activities"]:checked')
+          ).map((input) => input.value);
 
-      // Retrieve the selected city from the hidden input field
-      const selectedCity = document.getElementById('selectedCityInput').value;
+          // Generate itinerary based on preferences
+          const itinerary = generateItinerary(
+            selectedCity,
+            duration,
+            activities
+          );
 
-      // Check if a city is selected
-      if (!selectedCity) {
-        alert('Please select a city.');
-        return;
-      }
+          // Display itinerary
+          displayItinerary(itinerary);
+        });
 
-      // Retrieve other form inputs
-      const duration = parseInt(document.getElementById('duration').value);
-      const activities = Array.from(document.querySelectorAll('input[name="activities"]:checked')).map(input =>
-        input.value);
+      // Function to generate itinerary based on the selected city, duration, and activities
+      function generateItinerary(selectedCity, duration, activities) {
+        if (!selectedCity || !citiesData[selectedCity]) {
+          return {
+            error: "Destination not found",
+          };
+        }
 
-      // Generate itinerary based on preferences
-      const itinerary = generateItinerary(selectedCity, duration, activities);
+        const cityData = citiesData[selectedCity];
 
-      // Display itinerary
-      displayItinerary(itinerary);
-    });
-
-    // Function to generate itinerary based on the selected city, duration, and activities
-    function generateItinerary(selectedCity, duration, activities) {
-      if (!selectedCity || !citiesData[selectedCity]) {
-        return {
-          error: 'Destination not found'
+        const itinerary = {
+          selectedCity: selectedCity,
+          duration: duration,
+          activities: activities,
+          placesToStay: cityData.placesToStay,
+          restaurants: activities.includes("Eat") ? cityData.restaurants : [],
+          placesToVisit: activities.includes("Visit")
+            ? cityData.placesToVisit
+            : [],
+          shoppingPlaces: activities.includes("Shop")
+            ? cityData.shoppingPlaces
+            : [],
         };
+        return itinerary;
       }
 
-      const cityData = citiesData[selectedCity];
-
-      const itinerary = {
-        selectedCity: selectedCity,
-        duration: duration,
-        activities: activities,
-        placesToStay: cityData.placesToStay,
-        restaurants: activities.includes('Eat') ? cityData.restaurants : [],
-        placesToVisit: activities.includes('Visit') ? cityData.placesToVisit : [],
-        shoppingPlaces: activities.includes('Shop') ? cityData.shoppingPlaces : []
-      };
-      return itinerary;
-    }
-
-    // Function to display the generated itinerary
-    function displayItinerary(itinerary) {
-      const itineraryContainer = document.getElementById('itineraryContainer');
-      let itineraryHTML = `
+      // Function to display the generated itinerary
+      function displayItinerary(itinerary) {
+        const itineraryContainer =
+          document.getElementById("itineraryContainer");
+        let itineraryHTML = `
         <div class="itinerary">
           <h2 class="title big">Your Travel Itinerary</h2>
           <p><strong>Destination:</strong> ${itinerary.selectedCity}</p>
           <p><strong>Duration:</strong> ${itinerary.duration} days</p>
       `;
-      // Render Places to Stay section if itinerary.placesToStay exists
-      if (itinerary.placesToStay && itinerary.placesToStay.length > 0) {
-        itineraryHTML += `<p><strong>Places to Stay: </strong>`;
-        // Loop through each place to stay and create a link for it
-        itinerary.placesToStay.forEach(place => {
-          const placeName = place.name;
-          const placeLink = place.link;
-          if (placeLink) {
-            // Use the "link" class for styling
-            itineraryHTML += `<a href="${placeLink}" class="link" target="_blank">${placeName}</a>, `;
-          } else {
-            itineraryHTML += `${placeName}, `;
-          }
-        });
-        itineraryHTML += `</p>`;
-      }
-
-      // Render Restaurants section if itinerary.restaurants exists
-      if (itinerary.restaurants && itinerary.restaurants.length > 0) {
-        itineraryHTML += `<p><strong>Restaurants:</strong> `;
-        itinerary.restaurants.forEach(restaurant => {
-          const restaurantName = restaurant.name;
-          const restaurantLink = restaurant.link;
-          if (restaurantLink) {
-            // Use the "link" class for styling
-            itineraryHTML += `<a href="${restaurantLink}" class="link" target="_blank">${restaurantName}</a>, `;
-          } else {
-            itineraryHTML += `${restaurantName}, `;
-          }
-        });
-        itineraryHTML += `</p>`;
-      }
-
-      // Render Places to Visit section if itinerary.placesToVisit exists
-      if (itinerary.placesToVisit && itinerary.placesToVisit.length > 0) {
-        itineraryHTML += `<p><strong>Places to Visit:</strong> `;
-        itinerary.placesToVisit.forEach(place => {
-          const placeName = place.name;
-          const placeLink = place.link;
-          if (placeLink) {
-            // Use the "link" class for styling
-            itineraryHTML += `<a href="${placeLink}" class="link" target="_blank">${placeName}</a>, `;
-          } else {
-            itineraryHTML += `${placeName}, `;
-          }
-        });
-        itineraryHTML += `</p>`;
-      }
-
-      // Render Shopping Places section if itinerary.shoppingPlaces exists
-      if (itinerary.shoppingPlaces && itinerary.shoppingPlaces.length > 0) {
-        itineraryHTML += `<p><strong>Shopping Places:</strong> `;
-        itinerary.shoppingPlaces.forEach(place => {
-          const placeName = place.name;
-          const placeLink = place.link;
-          if (placeLink) {
-            // Use the "link" class for styling
-            itineraryHTML += `<a href="${placeLink}" class="link" target="_blank">${placeName}</a>, `;
-          } else {
-            itineraryHTML += `${placeName}, `;
-          }
-        });
-        itineraryHTML += `</p>`;
-      }
-
-      itineraryHTML += `</div>`;
-      itineraryContainer.innerHTML = itineraryHTML;
-    }
-
-    function selectCity(city, card) {
-      // Toggle the 'selected' class of the clicked card
-      card.classList.toggle('selected');
-
-      // Set the value of the hidden input field in the form with the selected city name
-      const selectedCityInput = document.getElementById('selectedCityInput');
-      if (card.classList.contains('selected')) {
-        selectedCityInput.value = city;
-        // If a city is selected, show the itinerary container
-        document.getElementById('itineraryContainer').style.display = 'block';
-      } else {
-        selectedCityInput.value = ''; // Deselect the city if the card is deselected
-        // Check if any city is selected, if not, hide the itinerary container
-        const selectedCards = document.querySelectorAll('.card.selected');
-        if (selectedCards.length === 0) {
-          document.getElementById('itineraryContainer').style.display = 'none';
+        // Render Places to Stay section if itinerary.placesToStay exists
+        if (itinerary.placesToStay && itinerary.placesToStay.length > 0) {
+          itineraryHTML += `<p><strong>Places to Stay: </strong>`;
+          // Loop through each place to stay and create a link for it
+          itinerary.placesToStay.forEach((place) => {
+            const placeName = place.name;
+            const placeLink = place.link;
+            if (placeLink) {
+              // Use the "link" class for styling
+              itineraryHTML += `<a href="${placeLink}" class="link" target="_blank">${placeName}</a>, `;
+            } else {
+              itineraryHTML += `${placeName}, `;
+            }
+          });
+          itineraryHTML += `</p>`;
         }
+
+        // Render Restaurants section if itinerary.restaurants exists
+        if (itinerary.restaurants && itinerary.restaurants.length > 0) {
+          itineraryHTML += `<p><strong>Restaurants:</strong> `;
+          itinerary.restaurants.forEach((restaurant) => {
+            const restaurantName = restaurant.name;
+            const restaurantLink = restaurant.link;
+            if (restaurantLink) {
+              // Use the "link" class for styling
+              itineraryHTML += `<a href="${restaurantLink}" class="link" target="_blank">${restaurantName}</a>, `;
+            } else {
+              itineraryHTML += `${restaurantName}, `;
+            }
+          });
+          itineraryHTML += `</p>`;
+        }
+
+        // Render Places to Visit section if itinerary.placesToVisit exists
+        if (itinerary.placesToVisit && itinerary.placesToVisit.length > 0) {
+          itineraryHTML += `<p><strong>Places to Visit:</strong> `;
+          itinerary.placesToVisit.forEach((place) => {
+            const placeName = place.name;
+            const placeLink = place.link;
+            if (placeLink) {
+              // Use the "link" class for styling
+              itineraryHTML += `<a href="${placeLink}" class="link" target="_blank">${placeName}</a>, `;
+            } else {
+              itineraryHTML += `${placeName}, `;
+            }
+          });
+          itineraryHTML += `</p>`;
+        }
+
+        // Render Shopping Places section if itinerary.shoppingPlaces exists
+        if (itinerary.shoppingPlaces && itinerary.shoppingPlaces.length > 0) {
+          itineraryHTML += `<p><strong>Shopping Places:</strong> `;
+          itinerary.shoppingPlaces.forEach((place) => {
+            const placeName = place.name;
+            const placeLink = place.link;
+            if (placeLink) {
+              // Use the "link" class for styling
+              itineraryHTML += `<a href="${placeLink}" class="link" target="_blank">${placeName}</a>, `;
+            } else {
+              itineraryHTML += `${placeName}, `;
+            }
+          });
+          itineraryHTML += `</p>`;
+        }
+
+        itineraryHTML += `</div>`;
+        itineraryContainer.innerHTML = itineraryHTML;
       }
 
-      // Deselect other cards if more than one card is selected
-      const selectedCards = document.querySelectorAll('.card.selected');
-      selectedCards.forEach(selectedCard => {
-        if (selectedCard !== card) {
-          selectedCard.classList.remove('selected');
+      function selectCity(city, card) {
+        // Toggle the 'selected' class of the clicked card
+        card.classList.toggle("selected");
+
+        // Set the value of the hidden input field in the form with the selected city name
+        const selectedCityInput = document.getElementById("selectedCityInput");
+        if (card.classList.contains("selected")) {
+          selectedCityInput.value = city;
+          // If a city is selected, show the itinerary container
+          document.getElementById("itineraryContainer").style.display = "block";
+        } else {
+          selectedCityInput.value = ""; // Deselect the city if the card is deselected
+          // Check if any city is selected, if not, hide the itinerary container
+          const selectedCards = document.querySelectorAll(".card.selected");
+          if (selectedCards.length === 0) {
+            document.getElementById("itineraryContainer").style.display =
+              "none";
+          }
         }
-      });
-    }
 
-    function resetItinerary() {
-      // Clear the itinerary container
-      document.getElementById('itineraryContainer').innerHTML = '';
+        // Deselect other cards if more than one card is selected
+        const selectedCards = document.querySelectorAll(".card.selected");
+        selectedCards.forEach((selectedCard) => {
+          if (selectedCard !== card) {
+            selectedCard.classList.remove("selected");
+          }
+        });
+      }
 
-      // Reset form values
-      document.getElementById('preferencesForm').reset();
+      function resetItinerary() {
+        // Clear the itinerary container
+        document.getElementById("itineraryContainer").innerHTML = "";
 
-      // Remove background or styling from selected city card
-      const selectedCityCards = document.querySelectorAll('.card.selected');
-      selectedCityCards.forEach(card => {
-        card.classList.remove('selected');
-      });
-    }
-  </script>
+        // Reset form values
+        document.getElementById("preferencesForm").reset();
 
-</body>
-
+        // Remove background or styling from selected city card
+        const selectedCityCards = document.querySelectorAll(".card.selected");
+        selectedCityCards.forEach((card) => {
+          card.classList.remove("selected");
+        });
+      }
+    </script>
+  </body>
 </html>

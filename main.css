@@ -119,6 +119,8 @@
   height: 10rem;
   flex: 0 0 calc(33.33% - 1.25rem);
   margin-bottom: 1.25rem;
+  border: 1px solid #ccc;
+  border-radius: 7px;
 }
 
 /* For screens between 769px and 1024px */

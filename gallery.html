@@ -1,147 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="page.css" />
+    <link rel="stylesheet" href="gallery.css" />
+    <script src="page.js" defer></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="page.css" />
-  <link rel="stylesheet" href="gallery.css" />
-  <script src="page.js" defer></script>
+    <title>CityZen || Gallery</title>
+  </head>
 
+  <body>
+    <div class="overlay"></div>
 
-  <title>CityZen || Gallery</title>
-</head>
+    <nav id="navbarContainer">
+      <div id="logo">CityZen</div>
+      <div id="navItems">
+        <a href="main.html">Home</a>
+        <a href="cities.html">Cities</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="travel.html">Travel</a>
+      </div>
+    </nav>
 
-<body>
-  <div class="overlay"></div>
-
-  <nav id="navbarContainer">
-    <div id="logo">CityZen</div>
-    <div id="navItems">
-      <a href="main.html">Home</a>
-      <a href="cities.html">Cities</a>
-      <a href="gallery.html" class="active">Gallery</a>
-      <a href="travel.html">Travel</a>
-    </div>
-  </nav>
-
-  <div class="sectionContainer_cities">
-    <div class="citiesContainer_cities">
-      <div class="modal-overlay"></div>
-      <div class="modal-container" id="modalContainer">
-        <div class="modal-content">
-          <span class="close-button">&times;</span>
+    <div class="sectionContainer_cities">
+      <div class="citiesContainer_cities">
+        <div class="modal-overlay"></div>
+        <div class="modal-container" id="modalContainer">
+          <div class="modal-content">
+            <span class="close-button">&times;</span>
+          </div>
+        </div>
+        <div class="galleryGrid">
+          <div class="photo city1_1" data-image-url="assets/Tokyo1.jpg">
+            <div class="label">Tokyo</div>
+            <div class="overlay_city">
+              <img
+                src="assets/search_icon.svg"
+                alt="Search Icon"
+                class="search-icon"
+              />
+            </div>
+          </div>
+          <div class="photo city2_1" data-image-url="assets/Kyoto1.jpg">
+            <div class="label">Kyoto</div>
+            <div class="overlay_city">
+              <img
+                src="assets/search_icon.svg"
+                alt="Search Icon"
+                class="search-icon"
+              />
+            </div>
+          </div>
+          <div class="photo city3_1" data-image-url="assets/Osaka1.jpg">
+            <div class="label">Osaka</div>
+            <div class="overlay_city">
+              <img
+                src="assets/search_icon.svg"
+                alt="Search Icon"
+                class="search-icon"
+              />
+            </div>
+          </div>
+          <div class="photo city4_1" data-image-url="assets/Nara1.jpg">
+            <div class="label">Nara</div>
+            <div class="overlay_city">
+              <img
+                src="assets/search_icon.svg"
+                alt="Search Icon"
+                class="search-icon"
+              />
+            </div>
+          </div>
+          <div class="photo city5_1 big" data-image-url="assets/Hiroshima1.jpg">
+            <div class="label">Hiroshima</div>
+            <div class="overlay_city">
+              <img
+                src="assets/search_icon.svg"
+                alt="Search Icon"
+                class="search-icon"
+              />
+            </div>
+          </div>
+          <div class="photo city6_1" data-image-url="./assets/Yokohama1.jpg">
+            <div class="label">Yokohama</div>
+            <div class="overlay_city">
+              <img
+                src="assets/search_icon.svg"
+                alt="Search Icon"
+                class="search-icon"
+              />
+            </div>
+          </div>
+          <div class="photo city1_2" data-image-url="assets/Tokyo2.jpg">
+            <div class="label">Tokyo</div>
+            <div class="overlay_city">
+              <img
+                src="assets/search_icon.svg"
+                alt="Search Icon"
+                class="search-icon"
+              />
+            </div>
+          </div>
+          <div class="photo city2_2" data-image-url="assets/Kyoto2.jpg">
+            <div class="label">Kyoto</div>
+            <div class="overlay_city">
+              <img
+                src="assets/search_icon.svg"
+                alt="Search Icon"
+                class="search-icon"
+              />
+            </div>
+          </div>
+          <div class="photo city3_2 big" data-image-url="assets/Osaka2.jpg">
+            <div class="label">Osaka</div>
+            <div class="overlay_city">
+              <img
+                src="assets/search_icon.svg"
+                alt="Search Icon"
+                class="search-icon"
+              />
+            </div>
+          </div>
+          <div class="photo city4_2" data-image-url="assets/Nara2.jpg">
+            <div class="label">Nara</div>
+            <div class="overlay_city">
+              <img
+                src="assets/search_icon.svg"
+                alt="Search Icon"
+                class="search-icon"
+              />
+            </div>
+          </div>
+          <div class="photo city5_2" data-image-url="assets/Hiroshima2.jpg">
+            <div class="label">Hiroshima</div>
+            <div class="overlay_city">
+              <img
+                src="assets/search_icon.svg"
+                alt="Search Icon"
+                class="search-icon"
+              />
+            </div>
+          </div>
+          <div class="photo city6_2" data-image-url="assets/Yokohama2.jpg">
+            <div class="label">Yokohama</div>
+            <div class="overlay_city">
+              <img
+                src="assets/search_icon.svg"
+                alt="Search Icon"
+                class="search-icon"
+              />
+            </div>
+          </div>
+          <div class="photo city1_3" data-image-url="assets/Tokyo3.jpg">
+            <div class="label">Tokyo</div>
+            <div class="overlay_city">
+              <img
+                src="assets/search_icon.svg"
+                alt="Search Icon"
+                class="search-icon"
+              />
+            </div>
+          </div>
+          <div class="photo city2_3" data-image-url="assets/Kyoto3.jpg">
+            <div class="label">Kyoto</div>
+            <div class="overlay_city">
+              <img
+                src="assets/search_icon.svg"
+                alt="Search Icon"
+                class="search-icon"
+              />
+            </div>
+          </div>
+          <div class="photo city3_3 big" data-image-url="assets/Osaka3.jpg">
+            <div class="label">Osaka</div>
+            <div class="overlay_city">
+              <img
+                src="assets/search_icon.svg"
+                alt="Search Icon"
+                class="search-icon"
+              />
+            </div>
+          </div>
+          <div class="photo city4_3" data-image-url="assets/Nara3.jpg">
+            <div class="label">Nara</div>
+            <div class="overlay_city">
+              <img
+                src="assets/search_icon.svg"
+                alt="Search Icon"
+                class="search-icon"
+              />
+            </div>
+          </div>
+          <div class="photo city5_3" data-image-url="assets/Hiroshima3.jpg">
+            <div class="label">Hiroshima</div>
+            <div class="overlay_city">
+              <img
+                src="assets/search_icon.svg"
+                alt="Search Icon"
+                class="search-icon"
+              />
+            </div>
+          </div>
+          <div class="photo city6_3" data-image-url="assets/Yokohama3.jpg">
+            <div class="label">Yokohama</div>
+            <div class="overlay_city">
+              <img
+                src="assets/search_icon.svg"
+                alt="Search Icon"
+                class="search-icon"
+              />
+            </div>
+          </div>
         </div>
       </div>
-      <div class="galleryGrid">
-        <div class="photo city1" data-image-url="assets/Tokyo1.jpg">
-          <div class="label">Tokyo</div>
-          <div class="overlay_city">
-            <img src="assets/search_icon.svg" alt="Search Icon" class="search-icon">
-          </div>
-        </div>
-        <div class="photo city2" data-image-url="assets/Kyoto1.jpg">
-          <div class="label">Kyoto</div>
-          <div class="overlay_city">
-            <img src="assets/search_icon.svg" alt="Search Icon" class="search-icon">
-          </div>
-        </div>
-        <div class="photo city3" data-image-url="assets/Osaka1.jpg">
-          <div class="label">Osaka</div>
-          <div class="overlay_city">
-            <img src="assets/search_icon.svg" alt="Search Icon" class="search-icon">
-          </div>
-        </div>
-        <div class="photo city4" data-image-url="assets/Nara1.jpg">
-          <div class="label">Nara</div>
-          <div class="overlay_city">
-            <img src="assets/search_icon.svg" alt="Search Icon" class="search-icon">
-          </div>
-        </div>
-        <div class="photo city5 big" data-image-url="assets/Hiroshima1.jpg">
-          <div class="label">Hiroshima</div>
-          <div class="overlay_city">
-            <img src="assets/search_icon.svg" alt="Search Icon" class="search-icon">
-          </div>
-        </div>
-        <div class="photo city6" data-image-url="assets/Yokohama1.jpg">
-          <div class="label">Yokohama</div>
-          <div class="overlay_city">
-            <img src="assets/search_icon.svg" alt="Search Icon" class="search-icon">
-          </div>
-        </div>
-        <div class="photo city6" data-image-url="assets/Tokyo1.jpg">
-          <div class="label">Tokyo</div>
-          <div class="overlay_city">
-            <img src="assets/search_icon.svg" alt="Search Icon" class="search-icon">
-          </div>
-        </div>
-        <div class="photo city6" data-image-url="assets/Tokyo1.jpg">
-          <div class="label">Tokyo</div>
-          <div class="overlay_city">
-            <img src="assets/search_icon.svg" alt="Search Icon" class="search-icon">
-          </div>
-        </div>
-        <div class="photo city6 big" data-image-url="assets/Tokyo1.jpg">
-          <div class="label">Tokyo</div>
-          <div class="overlay_city">
-            <img src="assets/search_icon.svg" alt="Search Icon" class="search-icon">
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Get references to the photo elements
-      const photos = document.querySelectorAll('.photo');
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get references to the photo elements
+        const photos = document.querySelectorAll(".photo");
 
-      // Get reference to the modal container
-      const modalContainer = document.getElementById('modalContainer');
+        // Get reference to the modal container
+        const modalContainer = document.getElementById("modalContainer");
 
-      photos.forEach(photo => {
-        photo.addEventListener('click', () => {
-          // Extract the URL of the background image associated with the clicked photo
-          const imageUrl = photo.getAttribute('data-image-url');
+        photos.forEach((photo) => {
+          photo.addEventListener("click", () => {
+            // Extract the URL of the background image associated with the clicked photo
+            const imageUrl = photo.getAttribute("data-image-url");
 
-          // Set the background image of the modal container
-          modalContainer.style.backgroundImage = `url('${imageUrl}')`;
+            // Set the background image of the modal container
+            modalContainer.style.backgroundImage = `url('${imageUrl}')`;
 
-          openModal()
+            openModal();
+          });
         });
       });
-    })
 
-    // Close the modal when the close button is clicked
-    document.querySelector('.close-button').addEventListener('click', closeModal);
+      // Close the modal when the close button is clicked
+      document
+        .querySelector(".close-button")
+        .addEventListener("click", closeModal);
 
+      // Open the modal and overlay
+      function openModal() {
+        document.querySelector(".modal-overlay").style.display = "block";
+        document.querySelector(".modal-container").style.display = "block";
+        disableScroll();
+      }
 
-    // Open the modal and overlay
-    function openModal() {
-      document.querySelector('.modal-overlay').style.display = 'block';
-      document.querySelector('.modal-container').style.display = 'block';
-      disableScroll();
-    }
+      // Close the modal and overlay
+      function closeModal() {
+        document.querySelector(".modal-overlay").style.display = "none";
+        document.querySelector(".modal-container").style.display = "none";
+        enableScroll();
+      }
 
-    // Close the modal and overlay
-    function closeModal() {
-      document.querySelector('.modal-overlay').style.display = 'none';
-      document.querySelector('.modal-container').style.display = 'none';
-      enableScroll();
-    }
+      // Function to disable scrolling
+      function disableScroll() {
+        document.body.style.overflow = "hidden";
+      }
 
-    // Function to disable scrolling
-    function disableScroll() {
-      document.body.style.overflow = 'hidden';
-    }
-
-    // Function to enable scrolling
-    function enableScroll() {
-      document.body.style.overflow = '';
-    }
-  </script>
-
-</body>
-
+      // Function to enable scrolling
+      function enableScroll() {
+        document.body.style.overflow = "";
+      }
+    </script>
+  </body>
 </html>

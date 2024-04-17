@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="page.css" />
+  <link rel="stylesheet" href="individualCity.css" />
+  <script src="page.js" defer></script>
+
+  <title>CityZen</title>
+</head>
+
+<body>
+  <div class="overlay"></div>
+
+  <nav id="navbarContainer">
+    <div id="logo">CityZen</div>
+    <div id="navItems">
+      <a href="main.html">Home</a>
+      <a href="cities.html" class="active">Cities</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="travel.html">Travel</a>
+    </div>
+  </nav>
+
+  <div class="sectionContainer">
+    <div class="citiesContainer">
+      <div class="text">
+        <h3 class="subtitle">Osaka Highlights</h3>
+        <div>
+          <strong>Short Description</strong>
+          <p class="info">Nestled in the heart of Japan, Osaka pulses with vibrant energy and rich history. 
+            From its iconic Osaka Castle to the bustling Dotonbori district, the city offers a dynamic blend of 
+            modernity and tradition. Explore its culinary delights, historic landmarks, and lively atmosphere, and 
+            immerse yourself in the spirit of Osaka!</p>
+        </div>
+        <div>
+          <strong>Top Attractions</strong>
+          <div class="grid-container">
+            <!-- To be completed with attractions -->
+          </div>
+        </div>
+        <div>
+          <strong>Restaurants</strong>
+          <div class="restaurants-grid">
+            <!-- To be completed with restaurants -->
+          </div>
+        </div>
+        <div>
+          <strong>Shopping Places</strong>
+          <div class="shopping-grid">
+            <!-- To be completed with shopping places -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="dataForCities.js"></script>
+    <script>
+      // Assuming you have a container element to append the generated HTML
+      const gridContainer = document.querySelector('.grid-container');
+
+      // Assuming 'city' is the city for which you want to display attractions
+      const city = 'Osaka'; // You can change this to any city name
+
+      // Get the attractions for the specified city
+      const attractions = dataForCities[city].attractions;
+
+      // Generate HTML for each attraction and append it to the grid container
+      attractions.forEach(attraction => {
+        const html = `
+    <div class="card" data-value="${city}">
+      <div class="card-content">
+        <img class="img-container" src="${attraction.link}" alt="${attraction.name}">
+        <div class="city-label">${attraction.name}</div>
+      </div>
+    </div>
+  `;
+        gridContainer.insertAdjacentHTML('beforeend', html);
+      });
+
+      
+      // RESTAURANTS
+      const restaurantsGrid = document.querySelector('.restaurants-grid');
+
+      // Get the attractions for the specified city
+      const restaurants = dataForCities[city].restaurants;
+
+      restaurants.forEach(restaurant => {
+        const restaurantCard = `
+    <div class="restaurant-card">
+      <div class="restaurant-info">
+        <a href="${restaurant.link}" class="restaurant-link">
+          <h3>${restaurant.name}</h3>
+        </a>
+        <div class="rating">
+          <span>${restaurant.rating} <i class="rating-star">★</i></span>
+        </div>
+      </div>
+    </div>
+  `;
+        restaurantsGrid.insertAdjacentHTML('beforeend', restaurantCard);
+      });
+
+
+      // SHOPPING PLACES
+      const shoppingGrid = document.querySelector('.shopping-grid');
+
+      // Get the attractions for the specified city
+      const shopping = dataForCities[city].shoppingPlaces;
+
+      shopping.forEach(shoppingPlace => {
+        const shoppingCard = `
+    <div class="restaurant-card">
+      <div class="restaurant-info">
+        <a href="${shoppingPlace.link}" class="restaurant-link">
+          <h3>${shoppingPlace.name}</h3>
+        </a>
+      </div>
+    </div>
+  `;
+        shoppingGrid.insertAdjacentHTML('beforeend', shoppingCard);
+      });
+    </script>
+</body>
+
+</html>
