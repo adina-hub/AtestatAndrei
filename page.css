@@ -67,14 +67,24 @@ nav a {
     color: #fff;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+/* CITIES IMAGES */
+
 .city1_1 {
     background: url(./assets/Tokyo1.jpg);
     background-size: cover;
 }
+
 .city1_2 {
     background: url(./assets/Tokyo2.jpg);
     background-size: cover;
 }
+
 .city1_3 {
     background: url(./assets/Tokyo3.jpg);
     background-size: cover;
@@ -84,10 +94,12 @@ nav a {
     background: url(./assets/Kyoto1.jpg);
     background-size: cover;
 }
+
 .city2_2 {
     background: url(./assets/Kyoto2.jpg);
     background-size: cover;
 }
+
 .city2_3 {
     background: url(./assets/Kyoto3.jpg);
     background-size: cover;
@@ -97,14 +109,17 @@ nav a {
     background: url(./assets/Osaka1.jpg);
     background-size: cover;
 }
+
 .city3_2 {
     background: url(./assets/Osaka2.jpg);
     background-size: cover;
 }
+
 .city3_3 {
     background: url(./assets/Osaka3.jpg);
     background-size: cover;
 }
+
 .city3_4 {
     background: url(./assets/Osaka4.jpg);
     background-size: cover;
@@ -114,10 +129,12 @@ nav a {
     background: url(./assets/Nara1.jpg);
     background-size: cover;
 }
+
 .city4_2 {
     background: url(./assets/Nara2.jpg);
     background-size: cover;
 }
+
 .city4_3 {
     background: url(./assets/Nara3.jpg);
     background-size: cover;
@@ -127,10 +144,12 @@ nav a {
     background: url(./assets/Hiroshima1.jpg);
     background-size: cover;
 }
+
 .city5_2 {
     background: url(./assets/Hiroshima2.jpg);
     background-size: cover;
 }
+
 .city5_3 {
     background: url(./assets/Hiroshima3.jpg);
     background-size: cover;
@@ -140,55 +159,13 @@ nav a {
     background: url(./assets/Yokohama1.jpg);
     background-size: cover;
 }
+
 .city6_2 {
     background: url(./assets/Yokohama2.jpg);
     background-size: cover;
 }
+
 .city6_3 {
     background: url(./assets/Yokohama3.jpg);
     background-size: cover;
 }
-
-
-.example {
-    height: 800px;
-}
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-
-
-
-.label {
-    text-decoration: none;
-    font-size: 15px;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: white;
-}
-
-.cities h3 {
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.cityButton:hover {
-    text-decoration: underline;
-}
-
-.big {
-    grid-column: span 2;
-}
-
-.close-button {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-}
-

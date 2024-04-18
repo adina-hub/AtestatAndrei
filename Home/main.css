@@ -98,9 +98,12 @@
   transition: transform 0.3s ease;
 }
 
+.cityButton:hover {
+  text-decoration: underline;
+}
+
 .cityButton:hover .arrow-icon-small {
   transform: translateX(1.25rem);
-  /* Adjust the value as needed */
 }
 
 .galleryContainer {
