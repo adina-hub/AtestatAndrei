@@ -21,18 +21,16 @@
 
 .sectionContainer {
   height: 100vh;
-  margin-bottom: 10vh;
   margin-top: 6.25rem;
+  margin-bottom: 10vh;
 }
 
 .second {
-  margin-bottom: 2rem;
+  margin-bottom: 15vh;
 }
 
 .citiesContainer {
-  margin: 6.25rem auto;
-  /* margin-bottom: 6.25rem;
-  margin-top: 6.25rem; */
+  margin: 0 auto; 
   min-height: 70vh;
   height: auto;
   width: 80vw;
