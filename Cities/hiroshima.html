@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="page.css" />
+  <link rel="stylesheet" href="../page.css" />
   <link rel="stylesheet" href="individualCity.css" />
-  <script src="page.js" defer></script>
+  <script src="../page.js" defer></script>
 
   <title>CityZen</title>
 </head>
@@ -17,22 +17,23 @@
   <nav id="navbarContainer">
     <div id="logo">CityZen</div>
     <div id="navItems">
-      <a href="main.html">Home</a>
+      <a href="../Home/main.html">Home</a>
       <a href="cities.html" class="active">Cities</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="travel.html">Travel</a>
+      <a href="../Gallery/gallery.html">Gallery</a>
+      <a href="../Travel/travel.html">Travel</a>
     </div>
   </nav>
 
   <div class="sectionContainer">
     <div class="citiesContainer">
       <div class="text">
-        <h3 class="subtitle">Nara Highlights</h3>
+        <h3 class="subtitle">Hiroshima Highlights</h3>
         <div>
           <strong>Short Description</strong>
-          <p class="info">Surrounded by scenic landscapes, Nara, Japan's first capital, is steeped in history and myth. 
-            Temples like Todai-ji, home to the Great Buddha, and Nara Park, where friendly deer roam, offer glimpses into 
-            its rich past. Amidst tranquil streets, Nara's charm lies in its blend of ancient wonders and natural beauty!</p>
+          <p class="info">Hiroshima, forever etched in history, stands as a testament to resilience and hope. 
+            The Peace Memorial Park, dedicated to the memory of the atomic bombing, reflects the city's commitment 
+            to peace and reconciliation. Amidst its modern skyline, Hiroshima's profound history and inspiring resilience 
+            continue to inspire visitors from around the world!</p>
         </div>
         <div>
           <strong>Top Attractions</strong>
@@ -55,13 +56,13 @@
       </div>
     </div>
 
-    <script src="dataForCities.js"></script>
+    <script src="../data/dataForCities.js"></script>
     <script>
       // Assuming you have a container element to append the generated HTML
       const gridContainer = document.querySelector('.grid-container');
 
       // Assuming 'city' is the city for which you want to display attractions
-      const city = 'Nara'; // You can change this to any city name
+      const city = 'Hiroshima'; // You can change this to any city name
 
       // Get the attractions for the specified city
       const attractions = dataForCities[city].attractions;
@@ -90,7 +91,7 @@
         const restaurantCard = `
     <div class="restaurant-card">
       <div class="restaurant-info">
-        <a href="${restaurant.link}" class="restaurant-link">
+        <a href="${restaurant.link}" class="restaurant-link" target="_blank">
           <h3>${restaurant.name}</h3>
         </a>
         <div class="rating">
@@ -113,7 +114,7 @@
         const shoppingCard = `
     <div class="restaurant-card">
       <div class="restaurant-info">
-        <a href="${shoppingPlace.link}" class="restaurant-link">
+        <a href="${shoppingPlace.link}" class="restaurant-link" target="_blank">
           <h3>${shoppingPlace.name}</h3>
         </a>
       </div>

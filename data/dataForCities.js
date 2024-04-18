@@ -3,15 +3,15 @@ const dataForCities = {
     attractions: [
       {
         name: "Tokyo Tower",
-        link: "./assets/Tokyo1.jpg",
+        link: "../assets/Tokyo1.jpg",
       },
       {
         name: "Senso-ji Temple",
-        link: "./assets/Tokyo2.jpg",
+        link: "../assets/Tokyo2.jpg",
       },
       {
         name: "Shibuya Crossing",
-        link: "./assets/Tokyo3.jpg",
+        link: "../assets/Tokyo3.jpg",
       },
     ],
     restaurants: [
@@ -50,7 +50,7 @@ const dataForCities = {
     attractions: [
       {
         name: "Kiyozumi-dera Temple",
-        link: "./assets/Kyoto1.jpg",
+        link: "../assets/Kyoto1.jpg",
         description:
           "Kinkaku-ji, officially named Rokuon-ji, is a Zen Buddhist temple in Kyoto, Japan.",
         location: "Kyoto",
@@ -59,7 +59,7 @@ const dataForCities = {
       },
       {
         name: "Fushimi Inari-taisha Shrine",
-        link: "./assets/Kyoto2.jpg",
+        link: "../assets/Kyoto2.jpg",
         description:
           "Fushimi Inari Taisha is the head shrine of the kami Inari, located in Fushimi-ku, Kyoto, Kyoto Prefecture, Japan.",
         location: "Kyoto",
@@ -68,7 +68,7 @@ const dataForCities = {
       },
       {
         name: "Arashiyama Bamboo Grove",
-        link: "./assets/Kyoto3.jpg",
+        link: "../assets/Kyoto3.jpg",
         description:
           "The Arashiyama Bamboo Grove is one of Kyoto's top sights and for good reason: standing amid these soaring stalks of bamboo is like being in another world.",
         location: "Kyoto",
@@ -112,15 +112,15 @@ const dataForCities = {
     attractions: [
       {
         name: "Osaka Castle",
-        link: "./assets/Osaka1.jpg",
+        link: "../assets/Osaka1.jpg",
       },
       {
         name: "Dotonbori",
-        link: "./assets/Osaka2.jpg",
+        link: "../assets/Osaka2.jpg",
       },
       {
         name: "Shitennoji Temple",
-        link: "./assets/Osaka3.jpg",
+        link: "../assets/Osaka3.jpg",
       },
     ],
     restaurants: [
@@ -159,7 +159,7 @@ const dataForCities = {
     attractions: [
       {
         name: "Nara Park",
-        link: "./assets/Nara1.jpg",
+        link: "../assets/Nara1.jpg",
         description:
           "Nara Park is a public park located in the city of Nara, Japan, at the foot of Mount Wakakusa.",
         location: "Nara",
@@ -168,7 +168,7 @@ const dataForCities = {
       },
       {
         name: "Todai-ji Temple",
-        link: "./assets/Nara2.jpg",
+        link: "../assets/Nara2.jpg",
         description:
           "Todai-ji is a Buddhist temple complex that houses the world's largest bronze statue of the Buddha Vairocana.",
         location: "Nara",
@@ -177,7 +177,7 @@ const dataForCities = {
       },
       {
         name: "Kasuga Taisha Shrine",
-        link: "./assets/Nara3.jpg",
+        link: "../assets/Nara3.jpg",
         description:
           "Kasuga Grand Shrine is a Shinto shrine in the city of Nara, Japan.",
         location: "Nara",
@@ -221,15 +221,15 @@ const dataForCities = {
     attractions: [
       {
         name: "Hiroshima Castle",
-        link: "./assets/Hiroshima1.jpg",
+        link: "../assets/Hiroshima1.jpg",
       },
       {
         name: "Itsukushima Shrine",
-        link: "./assets/Hiroshima2.jpg",
+        link: "../assets/Hiroshima2.jpg",
       },
       {
         name: "Shukkeien Garden",
-        link: "./assets/Hiroshima3.jpg",
+        link: "../assets/Hiroshima3.jpg",
       },
     ],
     restaurants: [
@@ -268,7 +268,7 @@ const dataForCities = {
     attractions: [
       {
         name: "Yokohama Chinatown",
-        link: "./assets/Yokohama1.jpg",
+        link: "../assets/Yokohama1.jpg",
         description:
           "Yokohama Chinatown is Japan's largest Chinatown, located in the city of Yokohama.",
         location: "Yokohama",
@@ -277,7 +277,7 @@ const dataForCities = {
       },
       {
         name: "Sankeien Garden",
-        link: "./assets/Yokohama2.jpg",
+        link: "../assets/Yokohama2.jpg",
         description:
           "Sankei-en is a traditional Japanese-style garden in Naka Ward, Yokohama, Japan.",
         location: "Yokohama",
@@ -286,7 +286,7 @@ const dataForCities = {
       },
       {
         name: "Hakkeijima Sea Paradise",
-        link: "./assets/Yokohama3.jpg",
+        link: "../assets/Yokohama3.jpg",
         description:
           "Yokohama Landmark Tower is the second tallest building and 4th tallest structure in Japan.",
         location: "Yokohama",

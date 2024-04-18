@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="page.css" />
+  <link rel="stylesheet" href="../page.css" />
   <link rel="stylesheet" href="individualCity.css" />
-  <script src="page.js" defer></script>
+  <script src="../page.js" defer></script>
 
   <title>CityZen</title>
 </head>
@@ -17,57 +17,50 @@
   <nav id="navbarContainer">
     <div id="logo">CityZen</div>
     <div id="navItems">
-      <a href="main.html">Home</a>
+      <a href="../Home/main.html">Home</a>
       <a href="cities.html" class="active">Cities</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="travel.html">Travel</a>
+      <a href="../Gallery/gallery.html">Gallery</a>
+      <a href="../Travel/travel.html">Travel</a>
     </div>
   </nav>
 
   <div class="sectionContainer">
     <div class="citiesContainer">
       <div class="text">
-        <h3 class="subtitle">Kyoto Highlights</h3>
+        <h3 class="subtitle">Tokyo Highlights</h3>
         <div>
           <strong>Short Description</strong>
-          <p class="info">Nestled in western Japan, Kyoto, Japan's ancient capital, preserves centuries of cultural heritage. 
-            From iconic temples like Kinkaku-ji to serene gardens, each corner exudes timeless beauty, inviting visitors to 
-            explore its storied past. With cobblestone alleys and moss-covered shrines, Kyoto's allure lies in its preservation 
-            of tradition, captivating all who wander its ancient streets!</p>
+          <p class="info">Tokyo, Japan's bustling capital, traces its roots back centuries, 
+            evolving from a humble fishing village into the vibrant metropolis it is today. Amidst modern skyscrapers, 
+            echoes of its storied past can be found in historic sites like the Imperial Palace, dating back to the Edo period, 
+            and the ancient Senso-ji Temple in Asakusa, offering glimpses into Tokyo's rich cultural heritage and enduring legacy.</p>
         </div>
         <div>
           <strong>Top Attractions</strong>
           <div class="grid-container">
-            <!-- To be completed with attractions -->
           </div>
         </div>
         <div>
           <strong>Restaurants</strong>
           <div class="restaurants-grid">
-            <!-- To be completed with restaurants -->
           </div>
         </div>
         <div>
           <strong>Shopping Places</strong>
           <div class="shopping-grid">
-            <!-- To be completed with shopping places -->
           </div>
         </div>
       </div>
     </div>
 
-    <script src="dataForCities.js"></script>
+    <script src="../data/dataForCities.js"></script>
     <script>
-      // Assuming you have a container element to append the generated HTML
       const gridContainer = document.querySelector('.grid-container');
 
-      // Assuming 'city' is the city for which you want to display attractions
-      const city = 'Kyoto'; // You can change this to any city name
+      const city = 'Tokyo';
 
-      // Get the attractions for the specified city
       const attractions = dataForCities[city].attractions;
 
-      // Generate HTML for each attraction and append it to the grid container
       attractions.forEach(attraction => {
         const html = `
     <div class="card" data-value="${city}">
@@ -80,18 +73,15 @@
         gridContainer.insertAdjacentHTML('beforeend', html);
       });
 
-      
-      // RESTAURANTS
       const restaurantsGrid = document.querySelector('.restaurants-grid');
 
-      // Get the attractions for the specified city
       const restaurants = dataForCities[city].restaurants;
 
       restaurants.forEach(restaurant => {
         const restaurantCard = `
     <div class="restaurant-card">
       <div class="restaurant-info">
-        <a href="${restaurant.link}" class="restaurant-link">
+        <a href="${restaurant.link}" class="restaurant-link" target="_blank">
           <h3>${restaurant.name}</h3>
         </a>
         <div class="rating">
@@ -103,18 +93,15 @@
         restaurantsGrid.insertAdjacentHTML('beforeend', restaurantCard);
       });
 
-
-      // SHOPPING PLACES
       const shoppingGrid = document.querySelector('.shopping-grid');
 
-      // Get the attractions for the specified city
       const shopping = dataForCities[city].shoppingPlaces;
 
       shopping.forEach(shoppingPlace => {
         const shoppingCard = `
     <div class="restaurant-card">
       <div class="restaurant-info">
-        <a href="${shoppingPlace.link}" class="restaurant-link">
+        <a href="${shoppingPlace.link}" class="restaurant-link" target="_blank">
           <h3>${shoppingPlace.name}</h3>
         </a>
       </div>
