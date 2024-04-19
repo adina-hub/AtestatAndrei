@@ -26,13 +26,13 @@
 }
 
 .second {
-  margin-bottom: 15vh;
+  height: 110vh;
 }
 
 .citiesContainer {
   margin: 0 auto; 
-  min-height: 70vh;
   height: auto;
+  min-height: 70vh;
   width: 80vw;
   background-color: rgba(0, 0, 0, 0.6);
   display: flex;
@@ -126,6 +126,10 @@
 
 /* For screens between 769px and 1024px */
 @media (min-width: 769px) and (max-width: 1024px) {
+  .second {
+    height: 115vh;
+  }
+
   .welcomeContainer h1 {
     font-size: 2.8rem;
     margin-bottom: 2.5rem;
