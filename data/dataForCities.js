@@ -51,29 +51,14 @@ const dataForCities = {
       {
         name: "Kiyozumi-dera Temple",
         link: "../assets/Kyoto1.jpg",
-        description:
-          "Kinkaku-ji, officially named Rokuon-ji, is a Zen Buddhist temple in Kyoto, Japan.",
-        location: "Kyoto",
-        openingHours: "9:00 AM - 5:00 PM",
-        admissionFee: "¥400",
       },
       {
         name: "Fushimi Inari-taisha Shrine",
         link: "../assets/Kyoto2.jpg",
-        description:
-          "Fushimi Inari Taisha is the head shrine of the kami Inari, located in Fushimi-ku, Kyoto, Kyoto Prefecture, Japan.",
-        location: "Kyoto",
-        openingHours: "24 hours",
-        admissionFee: "Free",
       },
       {
         name: "Arashiyama Bamboo Grove",
         link: "../assets/Kyoto3.jpg",
-        description:
-          "The Arashiyama Bamboo Grove is one of Kyoto's top sights and for good reason: standing amid these soaring stalks of bamboo is like being in another world.",
-        location: "Kyoto",
-        openingHours: "24 hours",
-        admissionFee: "Free",
       },
     ],
     restaurants: [
@@ -160,29 +145,14 @@ const dataForCities = {
       {
         name: "Nara Park",
         link: "../assets/Nara1.jpg",
-        description:
-          "Nara Park is a public park located in the city of Nara, Japan, at the foot of Mount Wakakusa.",
-        location: "Nara",
-        openingHours: "24 hours",
-        admissionFee: "Free",
       },
       {
         name: "Todai-ji Temple",
         link: "../assets/Nara2.jpg",
-        description:
-          "Todai-ji is a Buddhist temple complex that houses the world's largest bronze statue of the Buddha Vairocana.",
-        location: "Nara",
-        openingHours: "8:00 AM - 5:00 PM",
-        admissionFee: "¥600",
       },
       {
         name: "Kasuga Taisha Shrine",
         link: "../assets/Nara3.jpg",
-        description:
-          "Kasuga Grand Shrine is a Shinto shrine in the city of Nara, Japan.",
-        location: "Nara",
-        openingHours: "6:00 AM - 5:00 PM",
-        admissionFee: "¥500",
       },
     ],
     restaurants: [
@@ -269,29 +239,14 @@ const dataForCities = {
       {
         name: "Yokohama Chinatown",
         link: "../assets/Yokohama1.jpg",
-        description:
-          "Yokohama Chinatown is Japan's largest Chinatown, located in the city of Yokohama.",
-        location: "Yokohama",
-        openingHours: "24 hours",
-        admissionFee: "Free",
       },
       {
         name: "Sankeien Garden",
         link: "../assets/Yokohama2.jpg",
-        description:
-          "Sankei-en is a traditional Japanese-style garden in Naka Ward, Yokohama, Japan.",
-        location: "Yokohama",
-        openingHours: "9:00 AM - 5:00 PM",
-        admissionFee: "¥700",
       },
       {
         name: "Hakkeijima Sea Paradise",
         link: "../assets/Yokohama3.jpg",
-        description:
-          "Yokohama Landmark Tower is the second tallest building and 4th tallest structure in Japan.",
-        location: "Yokohama",
-        openingHours: "10:00 AM - 9:00 PM",
-        admissionFee: "Free to enter, observation deck fee: ¥1,000",
       },
     ],
     restaurants: [
@@ -326,5 +281,4 @@ const dataForCities = {
       },
     ],
   },
-
 };

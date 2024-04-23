@@ -12,11 +12,11 @@ const citiesData = {
       },
       {
         name: "Ryokan Asakusa Shigetsu",
-        link: "https://asakusashigetsu.com/en/",
+        link: "https://www.shigetsu.com/en/index.html",
       },
       {
         name: "Andaz Tokyo Toranomon Hills",
-        link: "https://www.hyatt.com/en-US/hotel/japan/andaz-tokyo-toranomon-hills/tyoaz",
+        link: "https://www.hyatt.com/andaz/tyoaz-andaz-tokyo-toranomon-hills",
       },
     ],
     shoppingPlaces: [
@@ -26,45 +26,48 @@ const citiesData = {
       },
       {
         name: "Takeshita Street (Harajuku)",
-        link: "https://www.gotokyo.org/en/spot/427/",
+        link: "https://www.gotokyo.org/en/spot/48/index.html",
       },
       {
         name: "Akihabara Electronics Market",
-        link: "https://www.gotokyo.org/en/spot/84/",
+        link: "https://livejapan.com/en/in-tokyo/in-pref-tokyo/in-akihabara/article-a0004361/",
       },
     ],
     placesToVisit: [
-      { name: "Senso-ji Temple", link: "https://www.gotokyo.org/en/spot/1/" },
-      { name: "Tokyo Tower", link: "https://www.tokyotower.co.jp/en.html" },
+      { name: "Tokyo Tower", link: "https://en.tokyotower.co.jp/" },
+      {
+        name: "Senso-ji Temple",
+        link: "https://www.japan-guide.com/e/e3001.html",
+      },
       {
         name: "Shinjuku Gyoen National Garden",
-        link: "https://www.gotokyo.org/en/spot/401/",
+        link: "https://www.japan-guide.com/e/e3034_001.html",
       },
     ],
   },
   Kyoto: {
     restaurants: [
-      { name: "Kichi Kichi Omurice", link: "https://kichi2.net/" },
-      { name: "Kyoto Gogyo Ramen", link: "https://gogyo.co.jp/kyoto/" },
-      { name: "Nishiki Market", link: "https://www.kyoto-nishiki.or.jp/" },
+      { name: "Ganko Sushi", link: "https://www.gankofood.co.jp/en/" },
+      {
+        name: "Nishiki Market",
+        link: "https://www.japan-guide.com/e/e3931.html",
+      },
+      { name: "Kichi Kichi Omurice", link: "https://kichikichi.com/en/menu/" },
     ],
     placesToStay: [
-      { name: "Hotel Granvia Kyoto", link: "https://granviakyoto.com/" },
-      { name: "Ryokan Ryokufuso", link: "http://www.ryokufuso.co.jp/en/" },
-      { name: "Sakura Terrace", link: "https://sakuraterrace.com/" },
+      { name: "Hotel Granvia Kyoto", link: "https://www.granviakyoto.com/" },
+      { name: "Ryokan Ryokufuso", link: "https://ryokufuso.jp/eng/" },
+      { name: "Sakura Terrace", link: "https://www.sakuraterrace.jp/en/" },
     ],
     shoppingPlaces: [
+      { name: "Teramachi Street", link: "http://www.kyoteramachi.com/en/" },
       {
-        name: "Teramachi Shopping Arcade",
-        link: "https://www.kyoto.travel/en/shopping/kyoto_malls_department_stores/103.html",
+        name: "Gion Shopping District",
+        link: "https://livejapan.com/en/in-kansai/in-pref-kyoto/in-gion_kawaramachi_kiyomizu-dera-temple/article-a2000020/",
       },
       {
-        name: "Kyoto Handicraft Center",
-        link: "https://www.kyotohandicraftcenter.com/",
-      },
-      {
-        name: "Kawaramachi Shopping Street",
-        link: "https://www.kyoto.travel/en/shopping/kyoto_malls_department_stores/110.html",
+        name: "Nishiki Market",
+        link: "https://www.japan-guide.com/e/e3931.html",
       },
     ],
     placesToVisit: [
@@ -78,20 +81,136 @@ const citiesData = {
       },
       {
         name: "Arashiyama Bamboo Grove",
-        link: "https://www.japan-guide.com/e/e3912.html",
+        link: "https://www.insidekyoto.com/arashiyama-bamboo-grove",
+      },
+    ],
+  },
+  Osaka: {
+    restaurants: [
+      {
+        name: "Ichiran Dotombori",
+        link: "https://insideosaka.com/ichiran-dotombori/",
+      },
+      {
+        name: "Kuromon Ichiba Market",
+        link: "https://www.japan-guide.com/e/e4031.html",
+      },
+      {
+        name: "Abeno Takoyaki Yamachan",
+        link: "https://insideosaka.com/abeno-takoyaki-yamachan/",
+      },
+    ],
+    placesToStay: [
+      {
+        name: "Hotel New Otani Osaka",
+        link: "https://www.newotani.co.jp/en/osaka/",
+      },
+      {
+        name: "Hotel Monterey La Soeur Osaka",
+        link: "https://www.hotelmonterey.co.jp/en/lasoeur_osaka/",
+      },
+      {
+        name: "Osaka Marriott Miyako Hotel",
+        link: "https://www.marriott.com/en-us/hotels/osamc-osaka-marriott-miyako-hotel/overview/",
+      },
+    ],
+    shoppingPlaces: [
+      {
+        name: "Shinsaibashi Shopping Street",
+        link: "https://insideosaka.com/shinsaibashi-suji-shopping-arcade/",
+      },
+      {
+        name: "Namba Parks",
+        link: "https://www.tripadvisor.com/Attraction_Review-g298566-d1189006-Reviews-Namba_Parks-Osaka_Osaka_Prefecture_Kinki.html",
+      },
+      {
+        name: "enjinbashi-suji Shopping Street",
+        link: "https://insideosaka.com/tenjinbashi-suji-shopping-street/",
+      },
+    ],
+    placesToVisit: [
+      {
+        name: "Osaka Castle",
+        link: "https://www.japan-guide.com/e/e4000.html",
+      },
+      {
+        name: "Dotonbori",
+        link: "https://www.osakastation.com/dotonbori-area-the-bright-heart-of-osaka/",
+      },
+      {
+        name: "Universal Studios Japan",
+        link: "https://www.usj.co.jp/web/en/us",
+      },
+    ],
+  },
+  Nara: {
+    restaurants: [
+      {
+        name: "Nara Hotel Dining Room",
+        link: "https://www.narahotel.co.jp/eng/restaurant/",
+      },
+      {
+        name: "Noborioji Hotel Dining",
+        link: "https://www.noborioji.com/en/dining/",
+      },
+      {
+        name: "Ristorante Borgo Konishi",
+        link: "https://guide.michelin.com/en/nara-region/nara/restaurant/ristorante-borgo-konishi",
+      },
+    ],
+    placesToStay: [
+      { name: "Nara Hotel", link: "https://www.narahotel.co.jp/eng/" },
+      {
+        name: "Guesthouse Nara Komachi",
+        link: "https://www.jp-nara.com/en/property/guesthousekomachi.html",
+      },
+      {
+        name: "The Deer Park Inn",
+        link: "https://www.jp-nara.com/en/property/the-deer-park-inn.html",
+      },
+    ],
+    shoppingPlaces: [
+      {
+        name: "Nara-Machi Shopping Street",
+        link: "https://www.kanpai-japan.com/nara/naramachi",
+      },
+      {
+        name: "Higashimuki Shopping Street",
+        link: "https://www.tripadvisor.com/Attraction_Review-g298198-d7084047-Reviews-Higashimuki_Shopping_Street-Nara_Nara_Prefecture_Kinki.html",
+      },
+      {
+        name: "Sanjo-dori Shopping Mall",
+        link: "https://www.gltjp.com/en/directory/item/12307/",
+      },
+    ],
+    placesToVisit: [
+      {
+        name: "Todai-ji Temple",
+        link: "https://www.japan-guide.com/e/e4100.html",
+      },
+      {
+        name: "Nara Park",
+        link: "hhttps://www.visitnara.jp/destinations/area/nara-park/",
+      },
+      {
+        name: "Kasuga Taisha Shrine",
+        link: "https://www.japan-guide.com/e/e4102.html",
       },
     ],
   },
   Hiroshima: {
     restaurants: [
       {
-        name: "Hiroshima-style Okonomiyaki",
-        link: "https://www.hiroshimaokonomi.jp/",
+        name: "Okonomiyaki House",
+        link: "https://www.tripadvisor.com/Attraction_Review-g298561-d11811641-Reviews-Okonomimura-Hiroshima_Hiroshima_Prefecture_Chugoku.html",
       },
-      { name: "Sora Shokudo", link: "http://sora-hiroshima.com/" },
       {
-        name: "Hiroshima Ramen",
-        link: "https://gastroskitchen.com/post/hirokitchi-ramen/",
+        name: "Soba Noodle Shop",
+        link: "https://gurunavi.com/en/y345200/rst/?__ngt__=TT153fcfb5a006ac1e4a59a1lTeLFVCodMPTlATHPrr9BP",
+      },
+      {
+        name: "Hiroshima Shutendoji",
+        link: "https://www.tripadvisor.com/Restaurant_Review-g298561-d3208021-Reviews-Hiroshima_Shutendouji-Hiroshima_Hiroshima_Prefecture_Chugoku.html",
       },
     ],
     placesToStay: [
@@ -105,122 +224,70 @@ const citiesData = {
       },
       {
         name: "APA Hotel Hiroshima-Ekimae",
-        link: "https://www.apahotel.com/hotel/kansai/10_hiroshima-ekimae/",
+        link: "https://www3.apahotel.com/hotel/chushikoku/hiroshima/hiroshima-ekimae/",
       },
     ],
     shoppingPlaces: [
+      { name: "Hiroshima Hondori", link: "https://www.hondori.or.jp/en/" },
       {
-        name: "Hondori Shopping Arcade",
-        link: "https://www.hiroshima-navi.or.jp/en/features/hondori.html",
+        name: "Hiroshima Marina Hop",
+        link: "https://dive-hiroshima.com/en/explore/76/",
       },
-      { name: "Hiroshima Parco", link: "https://www.parco-hiroshima.co.jp/" },
       {
-        name: "Hiroshima Flea Market",
-        link: "https://www.gotokyo.org/en/spot/1383/index.html",
+        name: "Hiroshima Orizuru Tower",
+        link: "https://www.orizurutower.jp/en/",
       },
     ],
     placesToVisit: [
       {
         name: "Hiroshima Peace Memorial Park",
-        link: "https://www.pcf.city.hiroshima.jp/top_e.html",
+        link: "https://www.japan-guide.com/e/e3400.html",
       },
       {
         name: "Itsukushima Shrine",
-        link: "https://www.japan-guide.com/e/e3405.html",
+        link: "https://www.japan-guide.com/e/e3450.html",
       },
       {
         name: "Shukkeien Garden",
-        link: "https://www.japan-guide.com/e/e3402.html",
-      },
-    ],
-  },
-  Nara: {
-    restaurants: [
-      {
-        name: "Noborioji Hotel Nara",
-        link: "https://www.noboriojihotel.com/en/",
-      },
-      {
-        name: "Yamato Sushi Naramachi",
-        link: "https://www.tripadvisor.com/Restaurant_Review-g298198-d729450-Reviews-Yamato_Sushi_Naramachi-Nara_Nara_Prefecture_Kinki.html",
-      },
-      {
-        name: "Tamaru",
-        link: "https://tabelog.com/en/nara/A2901/A290103/29010294/",
-      },
-    ],
-    placesToStay: [
-      { name: "Nara Hotel", link: "https://www.narahotel.co.jp/english/" },
-      {
-        name: "Guesthouse Nara Komachi",
-        link: "https://www.narakomachi.com/en/",
-      },
-      { name: "The Deer Park Inn", link: "https://www.thedeerparkinn.com/" },
-    ],
-    shoppingPlaces: [
-      {
-        name: "Naramachi Koshi-no-Ie",
-        link: "http://www.kosinoie-naramachi.com/",
-      },
-      {
-        name: "Higashimuki Shopping Street",
-        link: "https://www.visitnara.jp/venues/A00202/",
-      },
-      {
-        name: "Sanjo-dori Shopping Street",
-        link: "https://www.visitnara.jp/venues/A00203/",
-      },
-    ],
-    placesToVisit: [
-      {
-        name: "Todai-ji Temple",
-        link: "https://www.japan-guide.com/e/e4100.html",
-      },
-      { name: "Nara Park", link: "https://www.japan-guide.com/e/e4103.html" },
-      {
-        name: "Kasuga Taisha Shrine",
-        link: "https://www.japan-guide.com/e/e4102.html",
+        link: "https://www.japan-guide.com/e/e3403.html",
       },
     ],
   },
   Yokohama: {
     restaurants: [
+      { name: "Yokohama Iekei Ramen", link: "https://yokohamaiekei.net/" },
       {
-        name: "Shin-Yokohama Ramen Museum",
-        link: "https://www.yokohamaramenmuseum.com/",
+        name: "Yokohama Bay Quater",
+        link: "https://www.yokohama-bayquarter.com/en/",
       },
       {
-        name: "Harbor View Restaurant Royal Wing",
-        link: "https://www.princehotels.com/en/shin-yokohama/",
-      },
-      {
-        name: "Sky Building Yokohama",
-        link: "https://www.princehotels.com/en/skybuildingyokohama/",
+        name: "Saiko Shinkan",
+        link: "https://www.tripadvisor.com/Restaurant_Review-g298173-d1382596-Reviews-Saiko_Shinkan-Yokohama_Kanagawa_Prefecture_Kanto.html",
       },
     ],
     placesToStay: [
+      { name: "Yokohama Bay Hotel Tokyu", link: "https://ybht.co.jp/en/" },
       {
-        name: "Yokohama Bay Hotel Tokyu",
-        link: "https://www.yokohamabay-hotel.jp/en/",
+        name: "Hotel New Grand",
+        link: "https://www.hotel-newgrand.co.jp/english/",
       },
-      { name: "Hotel New Grand", link: "https://www.hotel-newgrand.co.jp/" },
       {
         name: "The Yokohama Bay Sheraton Hotel & Towers",
-        link: "https://www.marriott.com/hotels/travel/hndbs-the-yokohama-bay-sheraton-hotel-and-towers/",
+        link: "https://www.marriott.com/en-us/hotels/tyoys-yokohama-bay-sheraton-hotel-and-towers/overview/",
       },
     ],
     shoppingPlaces: [
       {
-        name: "Motomachi Shopping Street",
-        link: "https://www.jnto.go.jp/eng/spot/shopping/motomachi.html",
+        name: "Yokohama Motomachi Shopping Street",
+        link: "https://www.yokohamastation.com/yokohama-motomachi-shopping-street/",
       },
       {
         name: "Yokohama Red Brick Warehouse",
-        link: "https://www.yokohama-akarenga.jp/",
+        link: "https://www.japan.travel/en/spot/1598/",
       },
       {
-        name: "Yokohama Cosmo World",
-        link: "https://www.yokohamajapan.com/things-to-do/yokohama-cosmo-world/",
+        name: "Yokohama Landmark Plaza",
+        link: "https://www.yokohamajapan.com/things-to-do/detail.php?bbid=781",
       },
     ],
     placesToVisit: [
@@ -234,57 +301,8 @@ const citiesData = {
       },
       {
         name: "Yamashita Park",
-        link: "https://www.yokohamajapan.com/things-to-do/yamashita-park/",
+        link: "https://www.japan-guide.com/e/e3204.html",
       },
-    ],
-  },
-  Osaka: {
-    restaurants: [
-      {
-        name: "Dotonbori Konamon Museum",
-        link: "https://www.konamon.jp/english/",
-      },
-      {
-        name: "Hontsuru",
-        link: "https://tabelog.com/en/osaka/A2701/A270202/27010110/",
-      },
-      {
-        name: "Yakumido",
-        link: "https://tabelog.com/en/osaka/A2701/A270102/27009369/",
-      },
-    ],
-    placesToStay: [
-      {
-        name: "Hotel New Otani Osaka",
-        link: "https://www.newotani.co.jp/en/osaka/",
-      },
-      {
-        name: "Hotel Monterey La Soeur Osaka",
-        link: "https://www.hotelmonterey.co.jp/en/la-soeur/",
-      },
-      {
-        name: "Osaka Marriott Miyako Hotel",
-        link: "https://www.marriott.com/hotels/travel/osamc-osaka-marriott-miyako-hotel/",
-      },
-    ],
-    shoppingPlaces: [
-      {
-        name: "Shinsaibashi Shopping Street",
-        link: "https://www.osaka-info.jp/en/page/shinsaibashi",
-      },
-      {
-        name: "Dotonbori Shopping Street",
-        link: "https://www.osaka-info.jp/en/page/dotonbori",
-      },
-      {
-        name: "Americamura",
-        link: "https://www.osaka-info.jp/en/page/america-mura",
-      },
-    ],
-    placesToVisit: [
-      { name: "Osaka Castle", link: "https://www.osakacastle.net/english/" },
-      { name: "Dotonbori", link: "https://www.japan-guide.com/e/e4004.html" },
-      { name: "Universal Studios Japan", link: "https://www.usj.co.jp/e/" },
     ],
   },
 };
