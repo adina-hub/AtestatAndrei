@@ -38,19 +38,16 @@
         <div>
           <strong>Top Attractions</strong>
           <div class="grid-container">
-            <!-- To be completed with attractions -->
           </div>
         </div>
         <div>
           <strong>Restaurants</strong>
           <div class="restaurants-grid">
-            <!-- To be completed with restaurants -->
           </div>
         </div>
         <div>
           <strong>Shopping Places</strong>
           <div class="shopping-grid">
-            <!-- To be completed with shopping places -->
           </div>
         </div>
       </div>
@@ -58,13 +55,10 @@
 
     <script src="../data/dataForCities.js"></script>
     <script>
-      // Assuming you have a container element to append the generated HTML
       const gridContainer = document.querySelector('.grid-container');
 
-      // Assuming 'city' is the city for which you want to display attractions
-      const city = 'Kyoto'; // You can change this to any city name
+      const city = 'Kyoto';
 
-      // Get the attractions for the specified city
       const attractions = dataForCities[city].attractions;
 
       // Generate HTML for each attraction and append it to the grid container
@@ -84,7 +78,6 @@
       // RESTAURANTS
       const restaurantsGrid = document.querySelector('.restaurants-grid');
 
-      // Get the attractions for the specified city
       const restaurants = dataForCities[city].restaurants;
 
       restaurants.forEach(restaurant => {
@@ -107,7 +100,6 @@
       // SHOPPING PLACES
       const shoppingGrid = document.querySelector('.shopping-grid');
 
-      // Get the attractions for the specified city
       const shopping = dataForCities[city].shoppingPlaces;
 
       shopping.forEach(shoppingPlace => {

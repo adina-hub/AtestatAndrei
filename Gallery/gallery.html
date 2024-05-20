@@ -233,31 +233,26 @@
         });
       });
 
-      // Close the modal when the close button is clicked
       document
         .querySelector(".close-button")
         .addEventListener("click", closeModal);
 
-      // Open the modal and overlay
       function openModal() {
         document.querySelector(".modal-overlay").style.display = "block";
         document.querySelector(".modal-container").style.display = "block";
         disableScroll();
       }
 
-      // Close the modal and overlay
       function closeModal() {
         document.querySelector(".modal-overlay").style.display = "none";
         document.querySelector(".modal-container").style.display = "none";
         enableScroll();
       }
 
-      // Function to disable scrolling
       function disableScroll() {
         document.body.style.overflow = "hidden";
       }
 
-      // Function to enable scrolling
       function enableScroll() {
         document.body.style.overflow = "";
       }

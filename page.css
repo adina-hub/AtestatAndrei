@@ -56,7 +56,6 @@ body {
 
 #navItems a.active {
     text-decoration: underline;
-    /* Underline the link when it's active */
 }
 
 nav a {
